@@ -1,1 +1,5 @@
 message: "Bonjour"
+
+blackpear:
+  baseUrl: wibble
+  authorizationString: wobble
