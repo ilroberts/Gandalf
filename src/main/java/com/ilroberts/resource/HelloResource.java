@@ -1,4 +1,4 @@
-package com.ilroberts;
+package com.ilroberts.resource;
 
 import com.ilroberts.activity.Activity;
 import com.ilroberts.configuration.BlackPearConfiguration;
