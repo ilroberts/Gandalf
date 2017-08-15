@@ -1,8 +1,4 @@
-message: "Bonjour"
 
 blackpear:
   baseUrl: https://endor.blackpear.com/pyrusconnect/v1/Organization
   authorizationString: Basic aXRwLmVuZG9yQGthaW5vcy5jb206TGZkaHBDTWNtNm5Sanp0Z3k3NUVjWjI3RUEzQjh6TWY=
-
-swagger:
-  resourcePackage: com.ilroberts.resource
