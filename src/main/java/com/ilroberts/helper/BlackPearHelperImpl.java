@@ -8,6 +8,11 @@ import io.atlassian.fugue.Option;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import javax.annotation.Nonnull;
+import java.util.Optional;
+import java.util.stream.Stream;
+import java.util.stream.StreamSupport;
+
 @Singleton
 public class BlackPearHelperImpl implements BlackPearHelper {
 
@@ -23,10 +28,22 @@ public class BlackPearHelperImpl implements BlackPearHelper {
     @Override
     public Option<Patient> getPatientFromResponse(String response) {
 
-        JSONObject root = new JSONObject(response);
-        JSONArray entryArray = root.getJSONArray("entry");
-        JSONObject p = entryArray.getJSONObject(0);
-        Patient patient = parser.parseResource(Patient.class, p.getJSONObject("content").toString());
-        return Option.some(patient);
+        Optional<JSONObject> patientJson = arrayToStream(new JSONObject(response).getJSONArray("entry"))
+                .map(JSONObject.class::cast)
+                .map(o -> o.get("content"))
+                .map(JSONObject.class::cast)
+                .filter(t -> t.get("resourceType").equals("Patient"))
+                .findFirst();
+
+        if (patientJson.isPresent()) {
+            Patient patient = parser.parseResource(Patient.class, patientJson.get().toString());
+            return Option.some(patient);
+        }
+        return Option.none();
+    }
+
+    @Nonnull
+    private static Stream<Object> arrayToStream(JSONArray array) {
+        return StreamSupport.stream(array.spliterator(), false);
     }
 }
