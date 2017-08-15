@@ -29,8 +29,11 @@ dependencies {
     // https://mvnrepository.com/artifact/ca.uhn.hapi.fhir/hapi-fhir-structures-dstu2
     compile group: 'ca.uhn.hapi.fhir', name: 'hapi-fhir-structures-dstu2', version: '2.5'
 
+    // https://mvnrepository.com/artifact/com.smoketurner/dropwizard-swagger
+    compile group: 'com.smoketurner', name: 'dropwizard-swagger', version: '1.1.2-1'
+
     // https://mvnrepository.com/artifact/io.atlassian.fugue/fugue
-    provided group: 'io.atlassian.fugue', name: 'fugue', version: '4.5.0'
+    compile group: 'io.atlassian.fugue', name: 'fugue', version: '4.5.0'
 
     // https://mvnrepository.com/artifact/com.jayway.jsonpath/json-path
     compile group: 'com.jayway.jsonpath', name: 'json-path', version: '2.4.0'

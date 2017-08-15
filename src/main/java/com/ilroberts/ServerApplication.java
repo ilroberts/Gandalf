@@ -1,6 +1,7 @@
 package com.ilroberts;
 
 import com.hubspot.dropwizard.guice.GuiceBundle;
+import com.ilroberts.resource.BlackPearResource;
 import io.dropwizard.Application;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
@@ -17,14 +18,18 @@ public class ServerApplication extends Application<ServerConfiguration> {
                 .build();
 
         bootstrap.addBundle(guiceBundle);
+
+
     }
 
     @Override
     public void run(ServerConfiguration configuration, Environment environment) throws Exception {
 
+        environment.jersey().register(new BlackPearResource());
     }
 
     public static void main(String[] args) throws Exception {
         new ServerApplication().run(args);
+
     }
 }

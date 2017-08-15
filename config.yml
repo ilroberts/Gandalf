@@ -3,3 +3,6 @@ message: "Bonjour"
 blackpear:
   baseUrl: wibble
   authorizationString: wobble
+
+swagger:
+  resourcePackage: com.ilroberts.resource
