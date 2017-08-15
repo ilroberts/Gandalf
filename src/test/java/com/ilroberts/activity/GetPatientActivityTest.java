@@ -1,20 +1,30 @@
 package com.ilroberts.activity;
 
 import ca.uhn.fhir.model.dstu2.resource.Patient;
-import org.junit.Before;
+import com.ilroberts.api.BlackPearAPI;
+import com.ilroberts.api.BlackPearAPIMockImpl;
+import io.atlassian.fugue.Option;
+import org.jukito.JukitoModule;
+import org.jukito.JukitoRunner;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 
-import static org.assertj.core.api.Assertions.*;
+import javax.inject.Inject;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
+@RunWith(JukitoRunner.class)
 public class GetPatientActivityTest {
 
-
-    private GetPatientActivityImpl getPatientActivity;
-
-    @Before
-    public void init() {
-        getPatientActivity = new GetPatientActivityImpl();
+    public static class Module extends JukitoModule {
+        @Override
+        protected void configureTest() {
+            bind(BlackPearAPI.class).to(BlackPearAPIMockImpl.class);
+        }
     }
+
+    @Inject
+    private GetPatientActivityImpl getPatientActivity;
 
     @Test
     public void testGetPatient() {
@@ -22,8 +32,7 @@ public class GetPatientActivityTest {
         String orgId = "10101";
         String patientId = "123456";
 
-        Patient patient = getPatientActivity.getPatient(orgId, patientId);
-        assertThat(patient).isNotNull();
-
+        Option<Patient> patient = getPatientActivity.getPatient(orgId, patientId);
+        assertThat(patient).isEqualTo(Option.none());
     }
 }

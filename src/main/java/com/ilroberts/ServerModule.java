@@ -5,7 +5,6 @@ import com.google.inject.Provides;
 import com.ilroberts.activity.Activity;
 import com.ilroberts.activity.GetPatientActivity;
 import com.ilroberts.activity.GetPatientActivityImpl;
-import com.ilroberts.activity.HelloActivity;
 import com.ilroberts.api.BlackPearAPI;
 import com.ilroberts.api.BlackPearAPIImpl;
 import com.ilroberts.configuration.BlackPearConfiguration;
@@ -19,12 +18,6 @@ public class ServerModule extends AbstractModule {
 
         bind(GetPatientActivity.class).to(GetPatientActivityImpl.class);
 
-    }
-
-    @Provides
-    @Named("helloActivity")
-    public Activity provideActivity(ServerConfiguration configuration) {
-        return new HelloActivity(configuration.getMessage());
     }
 
     @Provides

@@ -5,14 +5,12 @@ import ca.uhn.fhir.model.dstu2.resource.Patient;
 import ca.uhn.fhir.parser.IParser;
 import com.ilroberts.activity.GetPatientActivity;
 import io.atlassian.fugue.Option;
-import io.swagger.annotations.Api;
 
 import javax.inject.Inject;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 
 @Path("/Organization")
-@Api("/Organization")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
 public class BlackPearResource {
