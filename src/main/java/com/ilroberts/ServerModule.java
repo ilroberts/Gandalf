@@ -6,6 +6,8 @@ import com.ilroberts.activity.Activity;
 import com.ilroberts.activity.GetPatientActivity;
 import com.ilroberts.activity.GetPatientActivityImpl;
 import com.ilroberts.activity.HelloActivity;
+import com.ilroberts.api.BlackPearAPI;
+import com.ilroberts.api.BlackPearAPIImpl;
 import com.ilroberts.configuration.BlackPearConfiguration;
 
 import javax.inject.Named;
@@ -14,6 +16,8 @@ public class ServerModule extends AbstractModule {
 
     @Override
     public void configure() {
+
+        bind(GetPatientActivity.class).to(GetPatientActivityImpl.class);
 
     }
 
@@ -36,9 +40,7 @@ public class ServerModule extends AbstractModule {
     }
 
     @Provides
-    @Named("getpatientactivity")
-    public GetPatientActivity provideGetPatientActivity(ServerConfiguration configuration) {
-        return new GetPatientActivityImpl();
+    public BlackPearAPI provideBlackPearAPI(ServerConfiguration configuration) {
+        return new BlackPearAPIImpl(configuration.getBlackPearConfiguration());
     }
-
 }
