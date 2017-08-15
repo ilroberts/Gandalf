@@ -18,8 +18,6 @@ public class ServerApplication extends Application<ServerConfiguration> {
                 .build();
 
         bootstrap.addBundle(guiceBundle);
-
-
     }
 
     @Override

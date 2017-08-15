@@ -3,6 +3,8 @@ package com.ilroberts;
 import com.google.inject.AbstractModule;
 import com.google.inject.Provides;
 import com.ilroberts.activity.Activity;
+import com.ilroberts.activity.GetPatientActivity;
+import com.ilroberts.activity.GetPatientActivityImpl;
 import com.ilroberts.activity.HelloActivity;
 import com.ilroberts.configuration.BlackPearConfiguration;
 
@@ -33,5 +35,10 @@ public class ServerModule extends AbstractModule {
         return configuration.getBlackPearConfiguration();
     }
 
+    @Provides
+    @Named("getpatientactivity")
+    public GetPatientActivity provideGetPatientActivity(ServerConfiguration configuration) {
+        return new GetPatientActivityImpl();
+    }
 
 }
