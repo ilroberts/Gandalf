@@ -4,6 +4,7 @@ import ca.uhn.fhir.context.FhirContext;
 import ca.uhn.fhir.model.dstu2.resource.Patient;
 import ca.uhn.fhir.parser.IParser;
 import com.google.inject.Singleton;
+import com.ilroberts.response.GetPatientResponse;
 import io.atlassian.fugue.Option;
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -26,9 +27,11 @@ public class BlackPearHelperImpl implements BlackPearHelper {
     }
 
     @Override
-    public Option<Patient> getPatientFromResponse(String response) {
+    public Option<Patient> getPatientFromResponse(GetPatientResponse response) {
 
-        Optional<JSONObject> patientJson = arrayToStream(new JSONObject(response).getJSONArray("entry"))
+        String responseString = response.get().getBody().toString();
+
+        Optional<JSONObject> patientJson = arrayToStream(new JSONObject(responseString).getJSONArray("entry"))
                 .map(JSONObject.class::cast)
                 .map(o -> o.get("content"))
                 .map(JSONObject.class::cast)

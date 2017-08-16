@@ -1,6 +1,8 @@
 package com.ilroberts.api;
 
 import com.ilroberts.configuration.BlackPearConfiguration;
+import com.ilroberts.response.GetPatientResponse;
+import com.ilroberts.response.GetPatientResponseImpl;
 import com.mashape.unirest.http.HttpResponse;
 import com.mashape.unirest.http.JsonNode;
 import com.mashape.unirest.http.Unirest;
@@ -19,9 +21,10 @@ public class BlackPearAPIImpl implements BlackPearAPI {
     }
 
     @Override
-    public Option<HttpResponse<JsonNode>> getPatient(String orgId, String patientId) {
+    public Option<GetPatientResponse> getPatient(String orgId, String patientId) {
 
         HttpResponse<JsonNode> response;
+
         try {
 
             String url = bpc.getBaseUrl() + "/{orgId}/Patient";
@@ -30,7 +33,7 @@ public class BlackPearAPIImpl implements BlackPearAPI {
                     .queryString("identifier", patientId)
                     .header("Authorization", bpc.getAuthorizationString()).asJson();
 
-            return Option.some(response);
+            return Option.some(new GetPatientResponseImpl(response));
 
         } catch (UnirestException e) {
             e.printStackTrace();
