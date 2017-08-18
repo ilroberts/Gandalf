@@ -1,0 +1,5301 @@
+{
+    "resourceType": "Bundle",
+    "title": "SystmOne patient medical record",
+    "id": "http://pyrusium.com/medicalrecord",
+    "updated": "2017-08-18T09:25:25.9576935+01:00",
+    "entry": [
+        {
+            "id": "9990073228",
+            "content": {
+                "resourceType": "Patient",
+                "id": "9990073228",
+                "identifier": [
+                    {
+                        "label": "NHS",
+                        "system": "http://www.datadictionary.nhs.uk/data_dictionary/attributes/n/nhs/nhs_number_de.asp",
+                        "value": "9990073228"
+                    }
+                ],
+                "name": [
+                    {
+                        "text": "Mr Nic-Donotuse Xxtestpatientiakv-TestPatient",
+                        "family": [
+                            "Xxtestpatientiakv-TestPatient"
+                        ],
+                        "given": [
+                            "Nic-Donotuse"
+                        ],
+                        "prefix": [
+                            "Mr"
+                        ]
+                    }
+                ],
+                "gender": {
+                    "coding": [
+                        {
+                            "system": "http://hl7.org/fhir/v3/vs/AdministrativeGender",
+                            "code": "M"
+                        }
+                    ]
+                },
+                "birthDate": "1943-02-23",
+                "address": [
+                    {
+                        "text": "c/o HSCIC TEST DATA MANAGER, 1 Trevelyan Square, Leeds, West Yorkshire, LS1 6AE",
+                        "line": [
+                            "c/o HSCIC TEST DATA MANAGER",
+                            "1 Trevelyan Square"
+                        ],
+                        "city": "Leeds",
+                        "state": "West Yorkshire",
+                        "zip": "LS1 6AE"
+                    }
+                ],
+                "careProvider": [
+                    {
+                        "reference": "Practitioner/drpeter0101"
+                    }
+                ],
+                "managingOrganization": {
+                    "reference": "Organization/HSCIC4",
+                    "identifier": {
+                        "system": "http://fhir.nhs.net/Id/ods-organization-code",
+                        "value": "HSCIC4"
+                    }
+                }
+            }
+        },
+        {
+            "id": "5ab90d0000000000",
+            "content": {
+                "resourceType": "Encounter",
+                "id": "5ab90d0000000000",
+                "status": "finished",
+                "class": "ambulatory",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "participant": [
+                    {
+                        "individual": {
+                            "reference": "Practitioner/drpeter0101",
+                            "display": "TAYLOR, Dr Peter (GP Partner)"
+                        }
+                    }
+                ],
+                "period": {
+                    "end": "1986-01-01"
+                },
+                "location": [
+                    {
+                        "location": {
+                            "display": "Surgery"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": "5ab90d0000000000-1",
+            "content": {
+                "resourceType": "Observation",
+                "id": "5ab90d0000000000-1",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "CTV3",
+                            "code": "XM0vo",
+                            "display": "Minor head injury"
+                        },
+                        {
+                            "system": "http://read.info/ctv3",
+                            "code": "XM0vo",
+                            "display": "Minor head injury"
+                        }
+                    ],
+                    "text": "Minor head injury"
+                },
+                "issued": "1986-01-01T00:00:00+00:00",
+                "status": "final",
+                "reliability": "unknown",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "performer": [
+                    {
+                        "reference": "Practitioner/drpeter0101",
+                        "display": "TAYLOR, Dr Peter (GP Partner)"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "18690d0000000000",
+            "content": {
+                "resourceType": "Encounter",
+                "id": "18690d0000000000",
+                "status": "finished",
+                "class": "ambulatory",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "participant": [
+                    {
+                        "individual": {
+                            "reference": "Practitioner/drpeter0101",
+                            "display": "TAYLOR, Dr Peter (GP Partner)"
+                        }
+                    }
+                ],
+                "period": {
+                    "end": "1986-01-01"
+                },
+                "location": [
+                    {
+                        "location": {
+                            "display": "Surgery"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": "18690d0000000000",
+            "content": {
+                "resourceType": "Condition",
+                "id": "18690d0000000000",
+                "extension": [
+                    {
+                        "url": "http://fhir.blackpear.com/activeProblem",
+                        "valueBoolean": true
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "encounter": {
+                    "reference": "Encounter/18690d0000000000"
+                },
+                "asserter": {
+                    "reference": "Practitioner/drpeter0101",
+                    "display": "TAYLOR, Dr Peter (GP Partner)"
+                },
+                "dateAsserted": "1986-01-01",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "CTV3",
+                            "code": "XM0vo",
+                            "display": "Minor head injury"
+                        },
+                        {
+                            "system": "http://read.info/ctv3",
+                            "code": "XM0vo",
+                            "display": "Minor head injury"
+                        }
+                    ],
+                    "text": "Minor head injury"
+                },
+                "severity": {
+                    "coding": [
+                        {
+                            "system": "SNOMED",
+                            "code": "255604002",
+                            "display": "Mild"
+                        }
+                    ],
+                    "text": "Mild"
+                }
+            }
+        },
+        {
+            "id": "28690d0000000000",
+            "content": {
+                "resourceType": "Encounter",
+                "id": "28690d0000000000",
+                "status": "finished",
+                "class": "ambulatory",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "participant": [
+                    {
+                        "individual": {
+                            "reference": "Practitioner/drpeter0101",
+                            "display": "TAYLOR, Dr Peter (GP Partner)"
+                        }
+                    }
+                ],
+                "period": {
+                    "end": "1986-08-11"
+                },
+                "location": [
+                    {
+                        "location": {
+                            "display": "Surgery"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": "28690d0000000000",
+            "content": {
+                "resourceType": "Condition",
+                "id": "28690d0000000000",
+                "extension": [
+                    {
+                        "url": "http://fhir.blackpear.com/activeProblem",
+                        "valueBoolean": true
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "encounter": {
+                    "reference": "Encounter/28690d0000000000"
+                },
+                "asserter": {
+                    "reference": "Practitioner/drpeter0101",
+                    "display": "TAYLOR, Dr Peter (GP Partner)"
+                },
+                "dateAsserted": "1986-08-11",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "CTV3",
+                            "code": "XE0ab",
+                            "display": "Diaphragmatic hernia"
+                        },
+                        {
+                            "system": "http://read.info/ctv3",
+                            "code": "XE0ab",
+                            "display": "Diaphragmatic hernia"
+                        }
+                    ],
+                    "text": "Diaphragmatic hernia"
+                },
+                "severity": {
+                    "coding": [
+                        {
+                            "system": "SNOMED",
+                            "code": "255604002",
+                            "display": "Mild"
+                        }
+                    ],
+                    "text": "Mild"
+                }
+            }
+        },
+        {
+            "id": "6ab90d0000000000",
+            "content": {
+                "resourceType": "Encounter",
+                "id": "6ab90d0000000000",
+                "status": "finished",
+                "class": "ambulatory",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "participant": [
+                    {
+                        "individual": {
+                            "reference": "Practitioner/drpeter0101",
+                            "display": "TAYLOR, Dr Peter (GP Partner)"
+                        }
+                    }
+                ],
+                "period": {
+                    "end": "1986-08-11"
+                },
+                "location": [
+                    {
+                        "location": {
+                            "display": "Surgery"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": "6ab90d0000000000",
+            "content": {
+                "resourceType": "Observation",
+                "id": "6ab90d0000000000",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "CTV3",
+                            "code": "XE0ab",
+                            "display": "Diaphragmatic hernia"
+                        },
+                        {
+                            "system": "http://read.info/ctv3",
+                            "code": "XE0ab",
+                            "display": "Diaphragmatic hernia"
+                        }
+                    ],
+                    "text": "Diaphragmatic hernia"
+                },
+                "issued": "1986-08-11T00:00:00+01:00",
+                "status": "final",
+                "reliability": "unknown",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "performer": [
+                    {
+                        "reference": "Practitioner/drpeter0101",
+                        "display": "TAYLOR, Dr Peter (GP Partner)"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "3ab90d0000000000",
+            "content": {
+                "resourceType": "Encounter",
+                "id": "3ab90d0000000000",
+                "status": "finished",
+                "class": "ambulatory",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "participant": [
+                    {
+                        "individual": {
+                            "reference": "Practitioner/drpeter0101",
+                            "display": "TAYLOR, Dr Peter (GP Partner)"
+                        }
+                    }
+                ],
+                "period": {
+                    "end": "1992-03-31"
+                },
+                "location": [
+                    {
+                        "location": {
+                            "display": "Surgery"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": "3ab90d0000000000-1",
+            "content": {
+                "resourceType": "Observation",
+                "id": "3ab90d0000000000-1",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "CTV3",
+                            "code": "XE1h4",
+                            "display": "O/E - weight greater than 20% over ideal"
+                        },
+                        {
+                            "system": "http://read.info/ctv3",
+                            "code": "XE1h4",
+                            "display": "O/E - weight greater than 20% over ideal"
+                        }
+                    ],
+                    "text": "O/E - weight greater than 20% over ideal"
+                },
+                "issued": "1992-03-31T00:00:00+01:00",
+                "status": "final",
+                "reliability": "unknown",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "performer": [
+                    {
+                        "reference": "Practitioner/drpeter0101",
+                        "display": "TAYLOR, Dr Peter (GP Partner)"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "09b90d0000000000",
+            "content": {
+                "resourceType": "Encounter",
+                "id": "09b90d0000000000",
+                "status": "finished",
+                "class": "ambulatory",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "participant": [
+                    {
+                        "individual": {
+                            "reference": "Practitioner/drpeter0101",
+                            "display": "TAYLOR, Dr Peter (GP Partner)"
+                        }
+                    }
+                ],
+                "period": {
+                    "end": "1992-03-31"
+                },
+                "location": [
+                    {
+                        "location": {
+                            "display": "Surgery"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": "09b90d0000000000",
+            "content": {
+                "resourceType": "Condition",
+                "id": "09b90d0000000000",
+                "extension": [
+                    {
+                        "url": "http://fhir.blackpear.com/activeProblem",
+                        "valueBoolean": true
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "encounter": {
+                    "reference": "Encounter/09b90d0000000000"
+                },
+                "asserter": {
+                    "reference": "Practitioner/drpeter0101",
+                    "display": "TAYLOR, Dr Peter (GP Partner)"
+                },
+                "dateAsserted": "1992-03-31",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "CTV3",
+                            "code": "XE0Ud",
+                            "display": "Essential hypertension NOS"
+                        },
+                        {
+                            "system": "http://read.info/ctv3",
+                            "code": "XE0Ud",
+                            "display": "Essential hypertension NOS"
+                        }
+                    ],
+                    "text": "Essential hypertension NOS"
+                },
+                "severity": {
+                    "coding": [
+                        {
+                            "system": "SNOMED",
+                            "code": "24484000",
+                            "display": "Severe"
+                        }
+                    ],
+                    "text": "Severe"
+                }
+            }
+        },
+        {
+            "id": "19b90d0000000000",
+            "content": {
+                "resourceType": "Encounter",
+                "id": "19b90d0000000000",
+                "status": "finished",
+                "class": "ambulatory",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "participant": [
+                    {
+                        "individual": {
+                            "reference": "Practitioner/drpeter0101",
+                            "display": "TAYLOR, Dr Peter (GP Partner)"
+                        }
+                    }
+                ],
+                "period": {
+                    "end": "1992-03-31"
+                },
+                "location": [
+                    {
+                        "location": {
+                            "display": "Surgery"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": "19b90d0000000000",
+            "content": {
+                "resourceType": "Observation",
+                "id": "19b90d0000000000",
+                "extension": [
+                    {
+                        "url": "http://pyrusium.com/systmone#episodicity",
+                        "valueString": "Ongoing"
+                    }
+                ],
+                "name": {
+                    "coding": [
+                        {
+                            "system": "CTV3",
+                            "code": "XE0Ud",
+                            "display": "Essential hypertension NOS"
+                        },
+                        {
+                            "system": "http://read.info/ctv3",
+                            "code": "XE0Ud",
+                            "display": "Essential hypertension NOS"
+                        }
+                    ],
+                    "text": "Essential hypertension NOS"
+                },
+                "issued": "1992-03-31T14:07:18+01:00",
+                "status": "final",
+                "reliability": "unknown",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "performer": [
+                    {
+                        "reference": "Practitioner/drpeter0101",
+                        "display": "TAYLOR, Dr Peter (GP Partner)"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "29b90d0000000000",
+            "content": {
+                "resourceType": "Encounter",
+                "id": "29b90d0000000000",
+                "status": "finished",
+                "class": "ambulatory",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "participant": [
+                    {
+                        "individual": {
+                            "reference": "Practitioner/drpeter0101",
+                            "display": "TAYLOR, Dr Peter (GP Partner)"
+                        }
+                    }
+                ],
+                "period": {
+                    "end": "1992-03-31"
+                },
+                "location": [
+                    {
+                        "location": {
+                            "display": "Surgery"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": "29b90d0000000000",
+            "content": {
+                "resourceType": "Condition",
+                "id": "29b90d0000000000",
+                "extension": [
+                    {
+                        "url": "http://fhir.blackpear.com/activeProblem",
+                        "valueBoolean": true
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "encounter": {
+                    "reference": "Encounter/29b90d0000000000"
+                },
+                "asserter": {
+                    "reference": "Practitioner/drpeter0101",
+                    "display": "TAYLOR, Dr Peter (GP Partner)"
+                },
+                "dateAsserted": "1992-03-31",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "CTV3",
+                            "code": "X40YQ",
+                            "display": "Morbid obesity"
+                        },
+                        {
+                            "system": "http://read.info/ctv3",
+                            "code": "X40YQ",
+                            "display": "Morbid obesity"
+                        }
+                    ],
+                    "text": "Morbid obesity"
+                },
+                "severity": {
+                    "coding": [
+                        {
+                            "system": "SNOMED",
+                            "code": "24484000",
+                            "display": "Severe"
+                        }
+                    ],
+                    "text": "Severe"
+                }
+            }
+        },
+        {
+            "id": "2ab90d0000000000",
+            "content": {
+                "resourceType": "Encounter",
+                "id": "2ab90d0000000000",
+                "status": "finished",
+                "class": "ambulatory",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "participant": [
+                    {
+                        "individual": {
+                            "reference": "Practitioner/drpeter0101",
+                            "display": "TAYLOR, Dr Peter (GP Partner)"
+                        }
+                    }
+                ],
+                "period": {
+                    "end": "1992-04-03"
+                },
+                "location": [
+                    {
+                        "location": {
+                            "display": "Surgery"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": "2ab90d0000000000",
+            "content": {
+                "resourceType": "Observation",
+                "id": "2ab90d0000000000",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "CTV3",
+                            "code": "XE2pz",
+                            "display": "Serum potassium level"
+                        },
+                        {
+                            "system": "http://read.info/ctv3",
+                            "code": "XE2pz",
+                            "display": "Serum potassium level"
+                        }
+                    ],
+                    "text": "Serum potassium level"
+                },
+                "valueQuantity": {
+                    "value": 4.6,
+                    "units": "mmol/L"
+                },
+                "issued": "1992-04-03T00:00:00+01:00",
+                "status": "final",
+                "reliability": "unknown",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "performer": [
+                    {
+                        "reference": "Practitioner/drpeter0101",
+                        "display": "TAYLOR, Dr Peter (GP Partner)"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "b7690d0000000000",
+            "content": {
+                "resourceType": "Encounter",
+                "id": "b7690d0000000000",
+                "status": "finished",
+                "class": "ambulatory",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "participant": [
+                    {
+                        "individual": {
+                            "reference": "Practitioner/drpeter0101",
+                            "display": "TAYLOR, Dr Peter (GP Partner)"
+                        }
+                    }
+                ],
+                "period": {
+                    "end": "1992-04-03"
+                },
+                "location": [
+                    {
+                        "location": {
+                            "display": "Surgery"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": "b7690d0000000000",
+            "content": {
+                "resourceType": "Observation",
+                "id": "b7690d0000000000",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "CTV3",
+                            "code": "XE2sb",
+                            "display": "Refer to pathology department"
+                        },
+                        {
+                            "system": "http://read.info/ctv3",
+                            "code": "XE2sb",
+                            "display": "Refer to pathology department"
+                        }
+                    ],
+                    "text": "Refer to pathology department"
+                },
+                "issued": "1992-04-03T00:00:00+01:00",
+                "status": "final",
+                "reliability": "unknown",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "performer": [
+                    {
+                        "reference": "Practitioner/drpeter0101",
+                        "display": "TAYLOR, Dr Peter (GP Partner)"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "d7690d0000000000",
+            "content": {
+                "resourceType": "Encounter",
+                "id": "d7690d0000000000",
+                "status": "finished",
+                "class": "ambulatory",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "participant": [
+                    {
+                        "individual": {
+                            "reference": "Practitioner/drpeter0101",
+                            "display": "TAYLOR, Dr Peter (GP Partner)"
+                        }
+                    }
+                ],
+                "period": {
+                    "end": "1992-04-03"
+                },
+                "location": [
+                    {
+                        "location": {
+                            "display": "Surgery"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": "d7690d0000000000-1",
+            "content": {
+                "resourceType": "Observation",
+                "id": "d7690d0000000000-1",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "CTV3",
+                            "code": "42A..",
+                            "display": "Mean cell volume"
+                        },
+                        {
+                            "system": "http://read.info/ctv3",
+                            "code": "42A..",
+                            "display": "Mean cell volume"
+                        }
+                    ],
+                    "text": "Mean cell volume"
+                },
+                "valueQuantity": {
+                    "value": 90.6,
+                    "units": "fL"
+                },
+                "issued": "1992-04-03T00:00:00+01:00",
+                "status": "final",
+                "reliability": "unknown",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "performer": [
+                    {
+                        "reference": "Practitioner/drpeter0101",
+                        "display": "TAYLOR, Dr Peter (GP Partner)"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "d7690d0000000000-2",
+            "content": {
+                "resourceType": "Observation",
+                "id": "d7690d0000000000-2",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "CTV3",
+                            "code": "42J..",
+                            "display": "Neutrophil count"
+                        },
+                        {
+                            "system": "http://read.info/ctv3",
+                            "code": "42J..",
+                            "display": "Neutrophil count"
+                        }
+                    ],
+                    "text": "Neutrophil count"
+                },
+                "valueQuantity": {
+                    "value": 2.08,
+                    "units": "10^9/L"
+                },
+                "issued": "1992-04-03T00:00:00+01:00",
+                "status": "final",
+                "reliability": "unknown",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "performer": [
+                    {
+                        "reference": "Practitioner/drpeter0101",
+                        "display": "TAYLOR, Dr Peter (GP Partner)"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "d7690d0000000000-3",
+            "content": {
+                "resourceType": "Observation",
+                "id": "d7690d0000000000-3",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "CTV3",
+                            "code": "X772z",
+                            "display": "Blood glucose level"
+                        },
+                        {
+                            "system": "http://read.info/ctv3",
+                            "code": "X772z",
+                            "display": "Blood glucose level"
+                        }
+                    ],
+                    "text": "Blood glucose level"
+                },
+                "valueQuantity": {
+                    "value": 5.5,
+                    "units": "mmol/L"
+                },
+                "issued": "1992-04-03T00:00:00+01:00",
+                "status": "final",
+                "reliability": "unknown",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "performer": [
+                    {
+                        "reference": "Practitioner/drpeter0101",
+                        "display": "TAYLOR, Dr Peter (GP Partner)"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "d7690d0000000000-4",
+            "content": {
+                "resourceType": "Observation",
+                "id": "d7690d0000000000-4",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "CTV3",
+                            "code": "XE2q0",
+                            "display": "Serum sodium level"
+                        },
+                        {
+                            "system": "http://read.info/ctv3",
+                            "code": "XE2q0",
+                            "display": "Serum sodium level"
+                        }
+                    ],
+                    "text": "Serum sodium level"
+                },
+                "valueQuantity": {
+                    "value": 138,
+                    "units": "mmol/L"
+                },
+                "issued": "1992-04-03T00:00:00+01:00",
+                "status": "final",
+                "reliability": "unknown",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "performer": [
+                    {
+                        "reference": "Practitioner/drpeter0101",
+                        "display": "TAYLOR, Dr Peter (GP Partner)"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "d7690d0000000000-5",
+            "content": {
+                "resourceType": "Observation",
+                "id": "d7690d0000000000-5",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "CTV3",
+                            "code": "42M..",
+                            "display": "Lymphocyte count"
+                        },
+                        {
+                            "system": "http://read.info/ctv3",
+                            "code": "42M..",
+                            "display": "Lymphocyte count"
+                        }
+                    ],
+                    "text": "Lymphocyte count"
+                },
+                "valueQuantity": {
+                    "value": 2.22,
+                    "units": "10^9/L"
+                },
+                "issued": "1992-04-03T00:00:00+01:00",
+                "status": "final",
+                "reliability": "unknown",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "performer": [
+                    {
+                        "reference": "Practitioner/drpeter0101",
+                        "display": "TAYLOR, Dr Peter (GP Partner)"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "d7690d0000000000-6",
+            "content": {
+                "resourceType": "Observation",
+                "id": "d7690d0000000000-6",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "CTV3",
+                            "code": "XE2px",
+                            "display": "Serum alkaline phosphatase level"
+                        },
+                        {
+                            "system": "http://read.info/ctv3",
+                            "code": "XE2px",
+                            "display": "Serum alkaline phosphatase level"
+                        }
+                    ],
+                    "text": "Serum alkaline phosphatase level"
+                },
+                "valueQuantity": {
+                    "value": 55,
+                    "units": "iu/L"
+                },
+                "issued": "1992-04-03T00:00:00+01:00",
+                "status": "final",
+                "reliability": "unknown",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "performer": [
+                    {
+                        "reference": "Practitioner/drpeter0101",
+                        "display": "TAYLOR, Dr Peter (GP Partner)"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "d7690d0000000000-7",
+            "content": {
+                "resourceType": "Observation",
+                "id": "d7690d0000000000-7",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "CTV3",
+                            "code": "XaLJx",
+                            "display": "Serum alanine aminotransferase level"
+                        },
+                        {
+                            "system": "http://read.info/ctv3",
+                            "code": "XaLJx",
+                            "display": "Serum alanine aminotransferase level"
+                        }
+                    ],
+                    "text": "Serum alanine aminotransferase level"
+                },
+                "valueQuantity": {
+                    "value": 45,
+                    "units": "iu/L"
+                },
+                "issued": "1992-04-03T00:00:00+01:00",
+                "status": "final",
+                "reliability": "unknown",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "performer": [
+                    {
+                        "reference": "Practitioner/drpeter0101",
+                        "display": "TAYLOR, Dr Peter (GP Partner)"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "d7690d0000000000-8",
+            "content": {
+                "resourceType": "Observation",
+                "id": "d7690d0000000000-8",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "CTV3",
+                            "code": "Xa96v",
+                            "display": "Haemoglobin concentration"
+                        },
+                        {
+                            "system": "http://read.info/ctv3",
+                            "code": "Xa96v",
+                            "display": "Haemoglobin concentration"
+                        }
+                    ],
+                    "text": "Haemoglobin concentration"
+                },
+                "valueQuantity": {
+                    "value": 16.4,
+                    "units": "g/dL"
+                },
+                "issued": "1992-04-03T00:00:00+01:00",
+                "status": "final",
+                "reliability": "unknown",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "performer": [
+                    {
+                        "reference": "Practitioner/drpeter0101",
+                        "display": "TAYLOR, Dr Peter (GP Partner)"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "d7690d0000000000-9",
+            "content": {
+                "resourceType": "Observation",
+                "id": "d7690d0000000000-9",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "CTV3",
+                            "code": "44E..",
+                            "display": "Serum bilirubin level"
+                        },
+                        {
+                            "system": "http://read.info/ctv3",
+                            "code": "44E..",
+                            "display": "Serum bilirubin level"
+                        }
+                    ],
+                    "text": "Serum bilirubin level"
+                },
+                "valueQuantity": {
+                    "value": 11,
+                    "units": "umol/L"
+                },
+                "issued": "1992-04-03T00:00:00+01:00",
+                "status": "final",
+                "reliability": "unknown",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "performer": [
+                    {
+                        "reference": "Practitioner/drpeter0101",
+                        "display": "TAYLOR, Dr Peter (GP Partner)"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "c9b90d0000000000",
+            "content": {
+                "resourceType": "Encounter",
+                "id": "c9b90d0000000000",
+                "status": "finished",
+                "class": "ambulatory",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "participant": [
+                    {
+                        "individual": {
+                            "reference": "Practitioner/drpeter0101",
+                            "display": "TAYLOR, Dr Peter (GP Partner)"
+                        }
+                    }
+                ],
+                "period": {
+                    "end": "1995-08-09"
+                },
+                "location": [
+                    {
+                        "location": {
+                            "display": "Surgery"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": "a9b90d0000000000",
+            "content": {
+                "resourceType": "Encounter",
+                "id": "a9b90d0000000000",
+                "status": "finished",
+                "class": "ambulatory",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "participant": [
+                    {
+                        "individual": {
+                            "reference": "Practitioner/drpeter0101",
+                            "display": "TAYLOR, Dr Peter (GP Partner)"
+                        }
+                    }
+                ],
+                "period": {
+                    "end": "1995-08-09"
+                },
+                "location": [
+                    {
+                        "location": {
+                            "display": "Surgery"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": "d9b90d0000000000",
+            "content": {
+                "resourceType": "Encounter",
+                "id": "d9b90d0000000000",
+                "status": "finished",
+                "class": "ambulatory",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "participant": [
+                    {
+                        "individual": {
+                            "reference": "Practitioner/drpeter0101",
+                            "display": "TAYLOR, Dr Peter (GP Partner)"
+                        }
+                    }
+                ],
+                "period": {
+                    "end": "1995-10-24"
+                },
+                "location": [
+                    {
+                        "location": {
+                            "display": "Surgery"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": "d9b90d0000000000-1",
+            "content": {
+                "resourceType": "Observation",
+                "id": "d9b90d0000000000-1",
+                "extension": [
+                    {
+                        "url": "http://pyrusium.com/systmone#narrativeline",
+                        "valueString": " E: 160/110mmHg"
+                    }
+                ],
+                "name": {
+                    "text": "Free text observation"
+                },
+                "comments": " E: 160/110mmHg",
+                "issued": "1995-10-24T14:36:34+01:00",
+                "status": "final",
+                "reliability": "unknown",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "performer": [
+                    {
+                        "reference": "Practitioner/drpeter0101",
+                        "display": "TAYLOR, Dr Peter (GP Partner)"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "d9b90d0000000000-2",
+            "content": {
+                "resourceType": "MedicationPrescription",
+                "id": "d9b90d0000000000-2",
+                "extension": [
+                    {
+                        "url": "http://fhir.blackpear.com/prescriptionType",
+                        "valueString": "RepeatMaster"
+                    },
+                    {
+                        "url": "http://fhir.blackpear.com/lastIssueDate",
+                        "valueString": "1995-10-24"
+                    }
+                ],
+                "dateWritten": "1995-10-24",
+                "status": "active",
+                "patient": {
+                    "reference": "Patient/9990073228"
+                },
+                "prescriber": {
+                    "reference": "Practitioner/drpeter0101",
+                    "display": "TAYLOR, Dr Peter (GP Partner)"
+                },
+                "encounter": {
+                    "reference": "Encounter/d9b90d0000000000"
+                },
+                "medication": {
+                    "reference": "Medication/med.d9b90d0000000000-2",
+                    "display": "Perindopril erbumine 2mg tablets"
+                },
+                "dosageInstruction": [
+                    {
+                        "text": "take one daily"
+                    }
+                ],
+                "dispense": {
+                    "validityPeriod": {
+                        "start": "1995-10-24"
+                    },
+                    "numberOfRepeatsAllowed": 1,
+                    "quantity": {
+                        "value": 30,
+                        "units": "tablet"
+                    },
+                    "expectedSupplyDuration": {
+                        "value": 2906,
+                        "units": "Days",
+                        "system": "http://unitsofmeasure.org/",
+                        "code": "d"
+                    }
+                }
+            }
+        },
+        {
+            "id": "d9b90d0000000000-3",
+            "content": {
+                "resourceType": "MedicationPrescription",
+                "id": "d9b90d0000000000-3",
+                "extension": [
+                    {
+                        "url": "http://fhir.blackpear.com/prescriptionType",
+                        "valueString": "RepeatIssue"
+                    }
+                ],
+                "dateWritten": "1995-10-24",
+                "status": "completed",
+                "patient": {
+                    "reference": "Patient/9990073228"
+                },
+                "prescriber": {
+                    "reference": "Practitioner/drpeter0101",
+                    "display": "TAYLOR, Dr Peter (GP Partner)"
+                },
+                "encounter": {
+                    "reference": "Encounter/d9b90d0000000000"
+                },
+                "medication": {
+                    "reference": "Medication/med.d9b90d0000000000-3",
+                    "display": "Perindopril erbumine 2mg tablets"
+                },
+                "dosageInstruction": [
+                    {
+                        "text": "take one daily"
+                    }
+                ],
+                "dispense": {
+                    "validityPeriod": {
+                        "start": "1995-10-24",
+                        "end": "2003-10-08"
+                    },
+                    "quantity": {
+                        "value": 30,
+                        "units": "tablet"
+                    }
+                }
+            }
+        },
+        {
+            "id": "39b90d0000000000",
+            "content": {
+                "resourceType": "Encounter",
+                "id": "39b90d0000000000",
+                "status": "finished",
+                "class": "ambulatory",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "participant": [
+                    {
+                        "individual": {
+                            "reference": "Practitioner/drpeter0101",
+                            "display": "TAYLOR, Dr Peter (GP Partner)"
+                        }
+                    }
+                ],
+                "period": {
+                    "end": "1996-04-01"
+                },
+                "location": [
+                    {
+                        "location": {
+                            "display": "Surgery"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": "39b90d0000000000",
+            "content": {
+                "resourceType": "Condition",
+                "id": "39b90d0000000000",
+                "extension": [
+                    {
+                        "url": "http://fhir.blackpear.com/activeProblem",
+                        "valueBoolean": true
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "encounter": {
+                    "reference": "Encounter/39b90d0000000000"
+                },
+                "asserter": {
+                    "reference": "Practitioner/drpeter0101",
+                    "display": "TAYLOR, Dr Peter (GP Partner)"
+                },
+                "dateAsserted": "1996-04-01",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "CTV3",
+                            "code": "XaBM2",
+                            "display": "Grand mal seizure"
+                        },
+                        {
+                            "system": "http://read.info/ctv3",
+                            "code": "XaBM2",
+                            "display": "Grand mal seizure"
+                        }
+                    ],
+                    "text": "Grand mal seizure"
+                },
+                "severity": {
+                    "coding": [
+                        {
+                            "system": "SNOMED",
+                            "code": "24484000",
+                            "display": "Severe"
+                        }
+                    ],
+                    "text": "Severe"
+                }
+            }
+        },
+        {
+            "id": "08690d0000000000",
+            "content": {
+                "resourceType": "Encounter",
+                "id": "08690d0000000000",
+                "status": "finished",
+                "class": "ambulatory",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "participant": [
+                    {
+                        "individual": {
+                            "reference": "Practitioner/drpeter0101",
+                            "display": "TAYLOR, Dr Peter (GP Partner)"
+                        }
+                    }
+                ],
+                "period": {
+                    "end": "2006-01-25"
+                },
+                "location": [
+                    {
+                        "location": {
+                            "display": "Surgery"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": "08690d0000000000",
+            "content": {
+                "resourceType": "Condition",
+                "id": "08690d0000000000",
+                "extension": [
+                    {
+                        "url": "http://fhir.blackpear.com/activeProblem",
+                        "valueBoolean": true
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "encounter": {
+                    "reference": "Encounter/08690d0000000000"
+                },
+                "asserter": {
+                    "reference": "Practitioner/drpeter0101",
+                    "display": "TAYLOR, Dr Peter (GP Partner)"
+                },
+                "dateAsserted": "2006-01-25",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "CTV3",
+                            "code": "6B...",
+                            "display": "Health promotion"
+                        },
+                        {
+                            "system": "http://read.info/ctv3",
+                            "code": "6B...",
+                            "display": "Health promotion"
+                        }
+                    ],
+                    "text": "Health promotion"
+                },
+                "severity": {
+                    "coding": [
+                        {
+                            "system": "SNOMED",
+                            "code": "255604002",
+                            "display": "Mild"
+                        }
+                    ],
+                    "text": "Mild"
+                }
+            }
+        },
+        {
+            "id": "0ab90d0000000000",
+            "content": {
+                "resourceType": "Encounter",
+                "id": "0ab90d0000000000",
+                "status": "finished",
+                "class": "ambulatory",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "participant": [
+                    {
+                        "individual": {
+                            "reference": "Practitioner/drpeter0101",
+                            "display": "TAYLOR, Dr Peter (GP Partner)"
+                        }
+                    }
+                ],
+                "period": {
+                    "end": "2006-01-25"
+                },
+                "location": [
+                    {
+                        "location": {
+                            "display": "Surgery"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": "0ab90d0000000000-2-0ab90d0000000000-1",
+            "content": {
+                "resourceType": "Observation",
+                "id": "0ab90d0000000000-2-0ab90d0000000000-1",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "READ2",
+                            "code": "246..",
+                            "display": "O/E - blood pressure reading"
+                        }
+                    ],
+                    "text": "O/E - blood pressure reading"
+                },
+                "issued": "2006-01-25T14:57:16+00:00",
+                "status": "final",
+                "reliability": "unknown",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "related": [
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/0ab90d0000000000-2"
+                        }
+                    },
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/0ab90d0000000000-1"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": "0ab90d0000000000-2",
+            "content": {
+                "resourceType": "Observation",
+                "id": "0ab90d0000000000-2",
+                "extension": [
+                    {
+                        "url": "http://fhir.blackpear.com/observationGroup",
+                        "valueString": "0ab90d0000000000"
+                    }
+                ],
+                "name": {
+                    "coding": [
+                        {
+                            "system": "CTV3",
+                            "code": "2469.",
+                            "display": "O/E - Systolic BP reading"
+                        },
+                        {
+                            "system": "http://read.info/ctv3",
+                            "code": "2469.",
+                            "display": "O/E - Systolic BP reading"
+                        }
+                    ],
+                    "text": "O/E - Systolic BP reading"
+                },
+                "valueQuantity": {
+                    "value": 210,
+                    "units": "mmHg"
+                },
+                "issued": "2006-01-25T14:57:16+00:00",
+                "status": "final",
+                "reliability": "unknown",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "performer": [
+                    {
+                        "reference": "Practitioner/drpeter0101",
+                        "display": "TAYLOR, Dr Peter (GP Partner)"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "0ab90d0000000000-1",
+            "content": {
+                "resourceType": "Observation",
+                "id": "0ab90d0000000000-1",
+                "extension": [
+                    {
+                        "url": "http://fhir.blackpear.com/observationGroup",
+                        "valueString": "0ab90d0000000000"
+                    }
+                ],
+                "name": {
+                    "coding": [
+                        {
+                            "system": "CTV3",
+                            "code": "246A.",
+                            "display": "O/E - Diastolic BP reading"
+                        },
+                        {
+                            "system": "http://read.info/ctv3",
+                            "code": "246A.",
+                            "display": "O/E - Diastolic BP reading"
+                        }
+                    ],
+                    "text": "O/E - Diastolic BP reading"
+                },
+                "valueQuantity": {
+                    "value": 120,
+                    "units": "mmHg"
+                },
+                "issued": "2006-01-25T14:57:16+00:00",
+                "status": "final",
+                "reliability": "unknown",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "performer": [
+                    {
+                        "reference": "Practitioner/drpeter0101",
+                        "display": "TAYLOR, Dr Peter (GP Partner)"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "0ab90d0000000000-3",
+            "content": {
+                "resourceType": "Observation",
+                "id": "0ab90d0000000000-3",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "CTV3",
+                            "code": "XE0oh",
+                            "display": "Never smoked tobacco"
+                        },
+                        {
+                            "system": "http://read.info/ctv3",
+                            "code": "XE0oh",
+                            "display": "Never smoked tobacco"
+                        }
+                    ],
+                    "text": "Never smoked tobacco"
+                },
+                "issued": "2006-01-25T14:57:16+00:00",
+                "status": "final",
+                "reliability": "unknown",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "performer": [
+                    {
+                        "reference": "Practitioner/drpeter0101",
+                        "display": "TAYLOR, Dr Peter (GP Partner)"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "87690d0000000000",
+            "content": {
+                "resourceType": "Encounter",
+                "id": "87690d0000000000",
+                "status": "finished",
+                "class": "ambulatory",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "participant": [
+                    {
+                        "individual": {
+                            "reference": "Practitioner/drpeter0101",
+                            "display": "TAYLOR, Dr Peter (GP Partner)"
+                        }
+                    }
+                ],
+                "period": {
+                    "end": "2006-01-26"
+                },
+                "location": [
+                    {
+                        "location": {
+                            "display": "Surgery"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": "87690d0000000000-1",
+            "content": {
+                "resourceType": "Observation",
+                "id": "87690d0000000000-1",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "CTV3",
+                            "code": "XaBiv",
+                            "display": "Soft tissue biopsy sample"
+                        },
+                        {
+                            "system": "http://read.info/ctv3",
+                            "code": "XaBiv",
+                            "display": "Soft tissue biopsy sample"
+                        }
+                    ],
+                    "text": "Soft tissue biopsy sample"
+                },
+                "issued": "2006-01-26T00:00:00+00:00",
+                "status": "final",
+                "reliability": "unknown",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "performer": [
+                    {
+                        "reference": "Practitioner/drpeter0101",
+                        "display": "TAYLOR, Dr Peter (GP Partner)"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "87690d0000000000-2",
+            "content": {
+                "resourceType": "Observation",
+                "id": "87690d0000000000-2",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "CTV3",
+                            "code": "X77b5",
+                            "display": "Microbiology test"
+                        },
+                        {
+                            "system": "http://read.info/ctv3",
+                            "code": "X77b5",
+                            "display": "Microbiology test"
+                        }
+                    ],
+                    "text": "Microbiology test"
+                },
+                "comments": "WBC: Nil: RBC: Nil; CULTURE: No Bacterial Growth",
+                "issued": "2006-01-26T00:00:00+00:00",
+                "status": "final",
+                "reliability": "unknown",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "performer": [
+                    {
+                        "reference": "Practitioner/drpeter0101",
+                        "display": "TAYLOR, Dr Peter (GP Partner)"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "87690d0000000000-3",
+            "content": {
+                "resourceType": "Observation",
+                "id": "87690d0000000000-3",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "CTV3",
+                            "code": "X7ADc",
+                            "display": "Mid-stream urine sample"
+                        },
+                        {
+                            "system": "http://read.info/ctv3",
+                            "code": "X7ADc",
+                            "display": "Mid-stream urine sample"
+                        }
+                    ],
+                    "text": "Mid-stream urine sample"
+                },
+                "issued": "2006-01-26T00:00:00+00:00",
+                "status": "final",
+                "reliability": "unknown",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "performer": [
+                    {
+                        "reference": "Practitioner/drpeter0101",
+                        "display": "TAYLOR, Dr Peter (GP Partner)"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "87690d0000000000-4",
+            "content": {
+                "resourceType": "Observation",
+                "id": "87690d0000000000-4",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "CTV3",
+                            "code": "4I14.",
+                            "display": "Sample macroscopy"
+                        },
+                        {
+                            "system": "http://read.info/ctv3",
+                            "code": "4I14.",
+                            "display": "Sample macroscopy"
+                        }
+                    ],
+                    "text": "Sample macroscopy"
+                },
+                "comments": "See report text\nMACRO\nRecived is a large polypoid lesion measureing 47 x 42 x 22mm high with point of attachment 22 x 17mm",
+                "issued": "2006-01-26T00:00:00+00:00",
+                "status": "final",
+                "reliability": "unknown",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "performer": [
+                    {
+                        "reference": "Practitioner/drpeter0101",
+                        "display": "TAYLOR, Dr Peter (GP Partner)"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "7ab90d0000000000",
+            "content": {
+                "resourceType": "Encounter",
+                "id": "7ab90d0000000000",
+                "status": "finished",
+                "class": "ambulatory",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "participant": [
+                    {
+                        "individual": {
+                            "reference": "Practitioner/drpeter0101",
+                            "display": "TAYLOR, Dr Peter (GP Partner)"
+                        }
+                    }
+                ],
+                "period": {
+                    "end": "2007-04-18"
+                },
+                "location": [
+                    {
+                        "location": {
+                            "display": "Surgery"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": "7ab90d0000000000",
+            "content": {
+                "resourceType": "Condition",
+                "id": "7ab90d0000000000",
+                "extension": [
+                    {
+                        "url": "http://fhir.blackpear.com/activeProblem",
+                        "valueBoolean": true
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "encounter": {
+                    "reference": "Encounter/7ab90d0000000000"
+                },
+                "asserter": {
+                    "reference": "Practitioner/drpeter0101",
+                    "display": "TAYLOR, Dr Peter (GP Partner)"
+                },
+                "dateAsserted": "2007-04-18",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "CTV3",
+                            "code": "XA00O",
+                            "display": "Knee injury"
+                        },
+                        {
+                            "system": "http://read.info/ctv3",
+                            "code": "XA00O",
+                            "display": "Knee injury"
+                        }
+                    ],
+                    "text": "Knee injury"
+                },
+                "severity": {
+                    "coding": [
+                        {
+                            "system": "SNOMED",
+                            "code": "255604002",
+                            "display": "Mild"
+                        }
+                    ],
+                    "text": "Mild"
+                },
+                "notes": "rt"
+            }
+        },
+        {
+            "id": "9ab90d0000000000",
+            "content": {
+                "resourceType": "Encounter",
+                "id": "9ab90d0000000000",
+                "status": "finished",
+                "class": "ambulatory",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "participant": [
+                    {
+                        "individual": {
+                            "reference": "Practitioner/drpeter0101",
+                            "display": "TAYLOR, Dr Peter (GP Partner)"
+                        }
+                    }
+                ],
+                "period": {
+                    "end": "2012-07-11"
+                },
+                "location": [
+                    {
+                        "location": {
+                            "display": "Surgery"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": "9ab90d0000000000-1",
+            "content": {
+                "resourceType": "Observation",
+                "id": "9ab90d0000000000-1",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "CTV3",
+                            "code": "X501E",
+                            "display": "Cellulitis of leg"
+                        },
+                        {
+                            "system": "http://read.info/ctv3",
+                            "code": "X501E",
+                            "display": "Cellulitis of leg"
+                        }
+                    ],
+                    "text": "Cellulitis of leg"
+                },
+                "comments": "Treated c ABs and definitely improved. On emollients => supply AB ung.",
+                "issued": "2012-07-11T00:00:00+01:00",
+                "status": "final",
+                "reliability": "unknown",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "performer": [
+                    {
+                        "reference": "Practitioner/drpeter0101",
+                        "display": "TAYLOR, Dr Peter (GP Partner)"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "df680d0000000000",
+            "content": {
+                "resourceType": "Encounter",
+                "id": "df680d0000000000",
+                "status": "finished",
+                "class": "ambulatory",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "participant": [
+                    {
+                        "individual": {
+                            "reference": "Practitioner/drpeter0101",
+                            "display": "TAYLOR, Dr Peter (GP Partner)"
+                        }
+                    }
+                ],
+                "period": {
+                    "end": "2012-07-11"
+                },
+                "location": [
+                    {
+                        "location": {
+                            "display": "Surgery"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": "df680d0000000000-1",
+            "content": {
+                "resourceType": "MedicationPrescription",
+                "id": "df680d0000000000-1",
+                "extension": [
+                    {
+                        "url": "http://fhir.blackpear.com/prescriptionType",
+                        "valueString": "RepeatMaster"
+                    },
+                    {
+                        "url": "http://fhir.blackpear.com/lastIssueDate",
+                        "valueString": "2012-07-11"
+                    }
+                ],
+                "dateWritten": "2017-08-17",
+                "status": "active",
+                "patient": {
+                    "reference": "Patient/9990073228"
+                },
+                "prescriber": {
+                    "reference": "Practitioner/drpeter0101",
+                    "display": "TAYLOR, Dr Peter (GP Partner)"
+                },
+                "encounter": {
+                    "reference": "Encounter/df680d0000000000"
+                },
+                "medication": {
+                    "reference": "Medication/med.df680d0000000000-1",
+                    "display": "Hydrocortisone acetate 1% / Fusidic acid 2% cream"
+                },
+                "dosageInstruction": [
+                    {
+                        "text": "apply twice daily"
+                    }
+                ],
+                "dispense": {
+                    "validityPeriod": {
+                        "start": "2017-08-17"
+                    },
+                    "numberOfRepeatsAllowed": 1,
+                    "quantity": {
+                        "value": 30,
+                        "units": "gram"
+                    },
+                    "expectedSupplyDuration": {
+                        "value": 7,
+                        "units": "Days",
+                        "system": "http://unitsofmeasure.org/",
+                        "code": "d"
+                    }
+                }
+            }
+        },
+        {
+            "id": "df680d0000000000-2",
+            "content": {
+                "resourceType": "MedicationPrescription",
+                "id": "df680d0000000000-2",
+                "extension": [
+                    {
+                        "url": "http://fhir.blackpear.com/prescriptionType",
+                        "valueString": "RepeatIssue"
+                    }
+                ],
+                "dateWritten": "2012-07-11",
+                "status": "completed",
+                "patient": {
+                    "reference": "Patient/9990073228"
+                },
+                "prescriber": {
+                    "reference": "Practitioner/drpeter0101",
+                    "display": "TAYLOR, Dr Peter (GP Partner)"
+                },
+                "encounter": {
+                    "reference": "Encounter/df680d0000000000"
+                },
+                "medication": {
+                    "reference": "Medication/med.df680d0000000000-2",
+                    "display": "Hydrocortisone acetate 1% / Fusidic acid 2% cream"
+                },
+                "dosageInstruction": [
+                    {
+                        "text": "apply twice daily"
+                    }
+                ],
+                "dispense": {
+                    "validityPeriod": {
+                        "start": "2012-07-11",
+                        "end": "2012-07-18"
+                    },
+                    "quantity": {
+                        "value": 30,
+                        "units": "gram"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1ab90d0000000000",
+            "content": {
+                "resourceType": "Encounter",
+                "id": "1ab90d0000000000",
+                "status": "finished",
+                "class": "ambulatory",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "participant": [
+                    {
+                        "individual": {
+                            "reference": "Practitioner/drpeter0101",
+                            "display": "TAYLOR, Dr Peter (GP Partner)"
+                        }
+                    }
+                ],
+                "period": {
+                    "end": "2012-07-23"
+                },
+                "location": [
+                    {
+                        "location": {
+                            "display": "Surgery"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": "1ab90d0000000000-1",
+            "content": {
+                "resourceType": "Observation",
+                "id": "1ab90d0000000000-1",
+                "name": {
+                    "text": "Free text observation"
+                },
+                "comments": "",
+                "issued": "2012-07-23T16:41:12+01:00",
+                "status": "final",
+                "reliability": "unknown",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "performer": [
+                    {
+                        "reference": "Practitioner/drpeter0101",
+                        "display": "TAYLOR, Dr Peter (GP Partner)"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "1ab90d0000000000-2",
+            "content": {
+                "resourceType": "MedicationPrescription",
+                "id": "1ab90d0000000000-2",
+                "extension": [
+                    {
+                        "url": "http://fhir.blackpear.com/prescriptionType",
+                        "valueString": "RepeatMaster"
+                    },
+                    {
+                        "url": "http://fhir.blackpear.com/lastIssueDate",
+                        "valueString": "2012-07-23"
+                    }
+                ],
+                "dateWritten": "2012-07-23",
+                "status": "active",
+                "patient": {
+                    "reference": "Patient/9990073228"
+                },
+                "prescriber": {
+                    "reference": "Practitioner/drpeter0101",
+                    "display": "TAYLOR, Dr Peter (GP Partner)"
+                },
+                "encounter": {
+                    "reference": "Encounter/1ab90d0000000000"
+                },
+                "medication": {
+                    "reference": "Medication/med.1ab90d0000000000-2",
+                    "display": "Co-fluampicil 250mg/250mg capsules"
+                },
+                "dosageInstruction": [
+                    {
+                        "text": "take one 4 times/day"
+                    }
+                ],
+                "dispense": {
+                    "validityPeriod": {
+                        "start": "2012-07-23"
+                    },
+                    "numberOfRepeatsAllowed": 1,
+                    "quantity": {
+                        "value": 28,
+                        "units": "capsule"
+                    },
+                    "expectedSupplyDuration": {
+                        "value": 7,
+                        "units": "Days",
+                        "system": "http://unitsofmeasure.org/",
+                        "code": "d"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1ab90d0000000000-3",
+            "content": {
+                "resourceType": "MedicationPrescription",
+                "id": "1ab90d0000000000-3",
+                "extension": [
+                    {
+                        "url": "http://fhir.blackpear.com/prescriptionType",
+                        "valueString": "RepeatMaster"
+                    },
+                    {
+                        "url": "http://fhir.blackpear.com/lastIssueDate",
+                        "valueString": "2012-07-23"
+                    }
+                ],
+                "dateWritten": "2012-07-23",
+                "status": "active",
+                "patient": {
+                    "reference": "Patient/9990073228"
+                },
+                "prescriber": {
+                    "reference": "Practitioner/drpeter0101",
+                    "display": "TAYLOR, Dr Peter (GP Partner)"
+                },
+                "encounter": {
+                    "reference": "Encounter/1ab90d0000000000"
+                },
+                "medication": {
+                    "reference": "Medication/med.1ab90d0000000000-3",
+                    "display": "Furosemide 20mg tablets"
+                },
+                "dosageInstruction": [
+                    {
+                        "text": "take one each morning"
+                    }
+                ],
+                "dispense": {
+                    "validityPeriod": {
+                        "start": "2012-07-23"
+                    },
+                    "numberOfRepeatsAllowed": 1,
+                    "quantity": {
+                        "value": 28,
+                        "units": "tablet"
+                    },
+                    "expectedSupplyDuration": {
+                        "value": 28,
+                        "units": "Days",
+                        "system": "http://unitsofmeasure.org/",
+                        "code": "d"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1ab90d0000000000-4",
+            "content": {
+                "resourceType": "MedicationPrescription",
+                "id": "1ab90d0000000000-4",
+                "extension": [
+                    {
+                        "url": "http://fhir.blackpear.com/prescriptionType",
+                        "valueString": "RepeatMaster"
+                    },
+                    {
+                        "url": "http://fhir.blackpear.com/lastIssueDate",
+                        "valueString": "2012-07-23"
+                    }
+                ],
+                "dateWritten": "2012-07-23",
+                "status": "active",
+                "patient": {
+                    "reference": "Patient/9990073228"
+                },
+                "prescriber": {
+                    "reference": "Practitioner/drpeter0101",
+                    "display": "TAYLOR, Dr Peter (GP Partner)"
+                },
+                "encounter": {
+                    "reference": "Encounter/1ab90d0000000000"
+                },
+                "medication": {
+                    "reference": "Medication/med.1ab90d0000000000-4",
+                    "display": "Polycal liquid (Flavour Not Specified)"
+                },
+                "dosageInstruction": [
+                    {
+                        "text": "use as directed"
+                    }
+                ],
+                "dispense": {
+                    "validityPeriod": {
+                        "start": "2012-07-23"
+                    },
+                    "numberOfRepeatsAllowed": 1,
+                    "quantity": {
+                        "value": 200,
+                        "units": "ml"
+                    },
+                    "expectedSupplyDuration": {
+                        "value": 5,
+                        "units": "Days",
+                        "system": "http://unitsofmeasure.org/",
+                        "code": "d"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1ab90d0000000000-5",
+            "content": {
+                "resourceType": "MedicationPrescription",
+                "id": "1ab90d0000000000-5",
+                "extension": [
+                    {
+                        "url": "http://fhir.blackpear.com/prescriptionType",
+                        "valueString": "RepeatIssue"
+                    }
+                ],
+                "dateWritten": "2012-07-23",
+                "status": "completed",
+                "patient": {
+                    "reference": "Patient/9990073228"
+                },
+                "prescriber": {
+                    "reference": "Practitioner/drpeter0101",
+                    "display": "TAYLOR, Dr Peter (GP Partner)"
+                },
+                "encounter": {
+                    "reference": "Encounter/1ab90d0000000000"
+                },
+                "medication": {
+                    "reference": "Medication/med.1ab90d0000000000-5",
+                    "display": "Co-fluampicil 250mg/250mg capsules"
+                },
+                "dosageInstruction": [
+                    {
+                        "text": "take one 4 times/day"
+                    }
+                ],
+                "dispense": {
+                    "validityPeriod": {
+                        "start": "2012-07-23",
+                        "end": "2012-07-30"
+                    },
+                    "quantity": {
+                        "value": 28,
+                        "units": "capsule"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1ab90d0000000000-6",
+            "content": {
+                "resourceType": "MedicationPrescription",
+                "id": "1ab90d0000000000-6",
+                "extension": [
+                    {
+                        "url": "http://fhir.blackpear.com/prescriptionType",
+                        "valueString": "RepeatIssue"
+                    }
+                ],
+                "dateWritten": "2012-07-23",
+                "status": "completed",
+                "patient": {
+                    "reference": "Patient/9990073228"
+                },
+                "prescriber": {
+                    "reference": "Practitioner/drpeter0101",
+                    "display": "TAYLOR, Dr Peter (GP Partner)"
+                },
+                "encounter": {
+                    "reference": "Encounter/1ab90d0000000000"
+                },
+                "medication": {
+                    "reference": "Medication/med.1ab90d0000000000-6",
+                    "display": "Furosemide 20mg tablets"
+                },
+                "dosageInstruction": [
+                    {
+                        "text": "take one each morning"
+                    }
+                ],
+                "dispense": {
+                    "validityPeriod": {
+                        "start": "2012-07-23",
+                        "end": "2012-08-20"
+                    },
+                    "quantity": {
+                        "value": 28,
+                        "units": "tablet"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1ab90d0000000000-7",
+            "content": {
+                "resourceType": "MedicationPrescription",
+                "id": "1ab90d0000000000-7",
+                "extension": [
+                    {
+                        "url": "http://fhir.blackpear.com/prescriptionType",
+                        "valueString": "RepeatIssue"
+                    }
+                ],
+                "dateWritten": "2012-07-23",
+                "status": "completed",
+                "patient": {
+                    "reference": "Patient/9990073228"
+                },
+                "prescriber": {
+                    "reference": "Practitioner/drpeter0101",
+                    "display": "TAYLOR, Dr Peter (GP Partner)"
+                },
+                "encounter": {
+                    "reference": "Encounter/1ab90d0000000000"
+                },
+                "medication": {
+                    "reference": "Medication/med.1ab90d0000000000-7",
+                    "display": "Polycal liquid (Flavour Not Specified)"
+                },
+                "dosageInstruction": [
+                    {
+                        "text": "use as directed"
+                    }
+                ],
+                "dispense": {
+                    "validityPeriod": {
+                        "start": "2012-07-23",
+                        "end": "2012-07-28"
+                    },
+                    "quantity": {
+                        "value": 200,
+                        "units": "ml"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1ab90d0000000000-8-1ab90d0000000000-9",
+            "content": {
+                "resourceType": "Observation",
+                "id": "1ab90d0000000000-8-1ab90d0000000000-9",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "READ2",
+                            "code": "246..",
+                            "display": "O/E - blood pressure reading"
+                        }
+                    ],
+                    "text": "O/E - blood pressure reading"
+                },
+                "issued": "2012-07-23T16:41:12+01:00",
+                "status": "final",
+                "reliability": "unknown",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "related": [
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/1ab90d0000000000-8"
+                        }
+                    },
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/1ab90d0000000000-9"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": "1ab90d0000000000-8",
+            "content": {
+                "resourceType": "Observation",
+                "id": "1ab90d0000000000-8",
+                "extension": [
+                    {
+                        "url": "http://fhir.blackpear.com/observationGroup",
+                        "valueString": "1ab90d0000000000"
+                    }
+                ],
+                "name": {
+                    "coding": [
+                        {
+                            "system": "CTV3",
+                            "code": "2469.",
+                            "display": "O/E - Systolic BP reading"
+                        },
+                        {
+                            "system": "http://read.info/ctv3",
+                            "code": "2469.",
+                            "display": "O/E - Systolic BP reading"
+                        }
+                    ],
+                    "text": "O/E - Systolic BP reading"
+                },
+                "valueQuantity": {
+                    "value": 130,
+                    "units": "mmHg"
+                },
+                "issued": "2012-07-23T16:41:12+01:00",
+                "status": "final",
+                "reliability": "unknown",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "performer": [
+                    {
+                        "reference": "Practitioner/drpeter0101",
+                        "display": "TAYLOR, Dr Peter (GP Partner)"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "1ab90d0000000000-9",
+            "content": {
+                "resourceType": "Observation",
+                "id": "1ab90d0000000000-9",
+                "extension": [
+                    {
+                        "url": "http://fhir.blackpear.com/observationGroup",
+                        "valueString": "1ab90d0000000000"
+                    }
+                ],
+                "name": {
+                    "coding": [
+                        {
+                            "system": "CTV3",
+                            "code": "246A.",
+                            "display": "O/E - Diastolic BP reading"
+                        },
+                        {
+                            "system": "http://read.info/ctv3",
+                            "code": "246A.",
+                            "display": "O/E - Diastolic BP reading"
+                        }
+                    ],
+                    "text": "O/E - Diastolic BP reading"
+                },
+                "valueQuantity": {
+                    "value": 85,
+                    "units": "mmHg"
+                },
+                "issued": "2012-07-23T16:41:12+01:00",
+                "status": "final",
+                "reliability": "unknown",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "performer": [
+                    {
+                        "reference": "Practitioner/drpeter0101",
+                        "display": "TAYLOR, Dr Peter (GP Partner)"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "49b90d0000000000",
+            "content": {
+                "resourceType": "Encounter",
+                "id": "49b90d0000000000",
+                "status": "finished",
+                "class": "ambulatory",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "participant": [
+                    {
+                        "individual": {
+                            "reference": "Practitioner/drpeter0101",
+                            "display": "TAYLOR, Dr Peter (GP Partner)"
+                        }
+                    }
+                ],
+                "period": {
+                    "end": "2012-09-25"
+                },
+                "location": [
+                    {
+                        "location": {
+                            "display": "Surgery"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": "49b90d0000000000",
+            "content": {
+                "resourceType": "Condition",
+                "id": "49b90d0000000000",
+                "extension": [
+                    {
+                        "url": "http://fhir.blackpear.com/activeProblem",
+                        "valueBoolean": true
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "encounter": {
+                    "reference": "Encounter/49b90d0000000000"
+                },
+                "asserter": {
+                    "reference": "Practitioner/drpeter0101",
+                    "display": "TAYLOR, Dr Peter (GP Partner)"
+                },
+                "dateAsserted": "2012-09-25",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "CTV3",
+                            "code": "X40J5",
+                            "display": "Type II diabetes mellitus"
+                        },
+                        {
+                            "system": "http://read.info/ctv3",
+                            "code": "X40J5",
+                            "display": "Type II diabetes mellitus"
+                        }
+                    ],
+                    "text": "Type II diabetes mellitus"
+                },
+                "severity": {
+                    "coding": [
+                        {
+                            "system": "SNOMED",
+                            "code": "24484000",
+                            "display": "Severe"
+                        }
+                    ],
+                    "text": "Severe"
+                }
+            }
+        },
+        {
+            "id": "48690d0000000000",
+            "content": {
+                "resourceType": "Encounter",
+                "id": "48690d0000000000",
+                "status": "finished",
+                "class": "ambulatory",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "participant": [
+                    {
+                        "individual": {
+                            "reference": "Practitioner/drpeter0101",
+                            "display": "TAYLOR, Dr Peter (GP Partner)"
+                        }
+                    }
+                ],
+                "period": {
+                    "end": "2014-09-09"
+                },
+                "location": [
+                    {
+                        "location": {
+                            "display": "Surgery"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": "48690d0000000000",
+            "content": {
+                "resourceType": "Condition",
+                "id": "48690d0000000000",
+                "extension": [
+                    {
+                        "url": "http://fhir.blackpear.com/activeProblem",
+                        "valueBoolean": true
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "encounter": {
+                    "reference": "Encounter/48690d0000000000"
+                },
+                "asserter": {
+                    "reference": "Practitioner/drpeter0101",
+                    "display": "TAYLOR, Dr Peter (GP Partner)"
+                },
+                "dateAsserted": "2014-09-09",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "CTV3",
+                            "code": "Xa0yJ",
+                            "display": "Musculoskeletal pain"
+                        },
+                        {
+                            "system": "http://read.info/ctv3",
+                            "code": "Xa0yJ",
+                            "display": "Musculoskeletal pain"
+                        }
+                    ],
+                    "text": "Musculoskeletal pain"
+                },
+                "severity": {
+                    "coding": [
+                        {
+                            "system": "SNOMED",
+                            "code": "255604002",
+                            "display": "Mild"
+                        }
+                    ],
+                    "text": "Mild"
+                }
+            }
+        },
+        {
+            "id": "ef680d0000000000",
+            "content": {
+                "resourceType": "Encounter",
+                "id": "ef680d0000000000",
+                "status": "finished",
+                "class": "ambulatory",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "participant": [
+                    {
+                        "individual": {
+                            "reference": "Practitioner/drpeter0101",
+                            "display": "TAYLOR, Dr Peter (GP Partner)"
+                        }
+                    }
+                ],
+                "period": {
+                    "end": "2014-09-09"
+                },
+                "location": [
+                    {
+                        "location": {
+                            "display": "Surgery"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": "ef680d0000000000-1",
+            "content": {
+                "resourceType": "Observation",
+                "id": "ef680d0000000000-1",
+                "extension": [
+                    {
+                        "url": "http://pyrusium.com/systmone#narrativeline",
+                        "valueString": "H: Left neck / Shoulder pain with parathaesiae left arm - acute onset induced by reaching movement - few similar niggles over previous days - neck or shoulder movement still causes pain - seen by paramedics this morning within few hours onset. Has eased significantly since - was given oramorph - ECG nil acute - BP also found to be elevated. E: Obese ++, not shocked / distressed, pulse 75bpm, O/E - soft tissue swelling (XM1XQ)in left suprascapular area with restricted neck rotation -> left. Oxygen saturation at periphery (X770D) D: Cervical root syndrome (N13y3)Brachial neuralgia P: -> CXR & C/spine -> simple analgesia & monitor BP"
+                    }
+                ],
+                "name": {
+                    "text": "Free text observation"
+                },
+                "comments": "H: Left neck / Shoulder pain with parathaesiae left arm - acute onset induced by reaching movement - few similar niggles over previous days - neck or shoulder movement still causes pain - seen by paramedics this morning within few hours onset. Has eased significantly since - was given oramorph - ECG nil acute - BP also found to be elevated. E: Obese ++, not shocked / distressed, pulse 75bpm, O/E - soft tissue swelling (XM1XQ)in left suprascapular area with restricted neck rotation -> left. Oxygen saturation at periphery (X770D) D: Cervical root syndrome (N13y3)Brachial neuralgia P: -> CXR & C/spine -> simple analgesia & monitor BP",
+                "issued": "2014-09-09T00:00:00+01:00",
+                "status": "final",
+                "reliability": "unknown",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "performer": [
+                    {
+                        "reference": "Practitioner/drpeter0101",
+                        "display": "TAYLOR, Dr Peter (GP Partner)"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "ef680d0000000000-2",
+            "content": {
+                "resourceType": "MedicationPrescription",
+                "id": "ef680d0000000000-2",
+                "extension": [
+                    {
+                        "url": "http://fhir.blackpear.com/prescriptionType",
+                        "valueString": "RepeatMaster"
+                    },
+                    {
+                        "url": "http://fhir.blackpear.com/lastIssueDate",
+                        "valueString": "2014-09-09"
+                    }
+                ],
+                "dateWritten": "2014-09-09",
+                "status": "active",
+                "patient": {
+                    "reference": "Patient/9990073228"
+                },
+                "prescriber": {
+                    "reference": "Practitioner/drpeter0101",
+                    "display": "TAYLOR, Dr Peter (GP Partner)"
+                },
+                "encounter": {
+                    "reference": "Encounter/ef680d0000000000"
+                },
+                "medication": {
+                    "reference": "Medication/med.ef680d0000000000-2",
+                    "display": "Co-codamol 30mg/500mg tablets"
+                },
+                "dosageInstruction": [
+                    {
+                        "text": "take 1 or 2 4 times/day"
+                    }
+                ],
+                "dispense": {
+                    "validityPeriod": {
+                        "start": "2014-09-09"
+                    },
+                    "numberOfRepeatsAllowed": 1,
+                    "quantity": {
+                        "value": 30,
+                        "units": "tablet"
+                    },
+                    "expectedSupplyDuration": {
+                        "value": 7,
+                        "units": "Days",
+                        "system": "http://unitsofmeasure.org/",
+                        "code": "d"
+                    }
+                }
+            }
+        },
+        {
+            "id": "ef680d0000000000-3",
+            "content": {
+                "resourceType": "MedicationPrescription",
+                "id": "ef680d0000000000-3",
+                "extension": [
+                    {
+                        "url": "http://fhir.blackpear.com/prescriptionType",
+                        "valueString": "RepeatIssue"
+                    }
+                ],
+                "dateWritten": "2014-09-09",
+                "status": "completed",
+                "patient": {
+                    "reference": "Patient/9990073228"
+                },
+                "prescriber": {
+                    "reference": "Practitioner/drpeter0101",
+                    "display": "TAYLOR, Dr Peter (GP Partner)"
+                },
+                "encounter": {
+                    "reference": "Encounter/ef680d0000000000"
+                },
+                "medication": {
+                    "reference": "Medication/med.ef680d0000000000-3",
+                    "display": "Co-codamol 30mg/500mg tablets"
+                },
+                "dosageInstruction": [
+                    {
+                        "text": "take 1 or 2 4 times/day"
+                    }
+                ],
+                "dispense": {
+                    "validityPeriod": {
+                        "start": "2014-09-09",
+                        "end": "2014-09-16"
+                    },
+                    "quantity": {
+                        "value": 30,
+                        "units": "tablet"
+                    }
+                }
+            }
+        },
+        {
+            "id": "ef680d0000000000-4",
+            "content": {
+                "resourceType": "Observation",
+                "id": "ef680d0000000000-4",
+                "extension": [
+                    {
+                        "url": "http://pyrusium.com/systmone#episodicity",
+                        "valueString": "Ongoing"
+                    }
+                ],
+                "name": {
+                    "coding": [
+                        {
+                            "system": "CTV3",
+                            "code": "Xa0yJ",
+                            "display": "Musculoskeletal pain"
+                        },
+                        {
+                            "system": "http://read.info/ctv3",
+                            "code": "Xa0yJ",
+                            "display": "Musculoskeletal pain"
+                        }
+                    ],
+                    "text": "Musculoskeletal pain"
+                },
+                "issued": "2014-09-09T00:00:00+01:00",
+                "status": "final",
+                "reliability": "unknown",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "performer": [
+                    {
+                        "reference": "Practitioner/drpeter0101",
+                        "display": "TAYLOR, Dr Peter (GP Partner)"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "ef680d0000000000-5",
+            "content": {
+                "resourceType": "Observation",
+                "id": "ef680d0000000000-5",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "CTV3",
+                            "code": "N13y3",
+                            "display": "Cervical root syndrome"
+                        },
+                        {
+                            "system": "http://read.info/ctv3",
+                            "code": "N13y3",
+                            "display": "Cervical root syndrome"
+                        }
+                    ],
+                    "text": "Cervical root syndrome"
+                },
+                "issued": "2014-09-09T00:00:00+01:00",
+                "status": "final",
+                "reliability": "unknown",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "performer": [
+                    {
+                        "reference": "Practitioner/drpeter0101",
+                        "display": "TAYLOR, Dr Peter (GP Partner)"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "ef680d0000000000-6-ef680d0000000000-7",
+            "content": {
+                "resourceType": "Observation",
+                "id": "ef680d0000000000-6-ef680d0000000000-7",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "READ2",
+                            "code": "246..",
+                            "display": "O/E - blood pressure reading"
+                        }
+                    ],
+                    "text": "O/E - blood pressure reading"
+                },
+                "issued": "2014-09-09T00:00:00+01:00",
+                "status": "final",
+                "reliability": "unknown",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "related": [
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/ef680d0000000000-6"
+                        }
+                    },
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/ef680d0000000000-7"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": "ef680d0000000000-6",
+            "content": {
+                "resourceType": "Observation",
+                "id": "ef680d0000000000-6",
+                "extension": [
+                    {
+                        "url": "http://fhir.blackpear.com/observationGroup",
+                        "valueString": "ef680d0000000000"
+                    }
+                ],
+                "name": {
+                    "coding": [
+                        {
+                            "system": "CTV3",
+                            "code": "2469.",
+                            "display": "O/E - Systolic BP reading"
+                        },
+                        {
+                            "system": "http://read.info/ctv3",
+                            "code": "2469.",
+                            "display": "O/E - Systolic BP reading"
+                        }
+                    ],
+                    "text": "O/E - Systolic BP reading"
+                },
+                "valueQuantity": {
+                    "value": 180,
+                    "units": "mmHg"
+                },
+                "issued": "2014-09-09T00:00:00+01:00",
+                "status": "final",
+                "reliability": "unknown",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "performer": [
+                    {
+                        "reference": "Practitioner/drpeter0101",
+                        "display": "TAYLOR, Dr Peter (GP Partner)"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "ef680d0000000000-7",
+            "content": {
+                "resourceType": "Observation",
+                "id": "ef680d0000000000-7",
+                "extension": [
+                    {
+                        "url": "http://fhir.blackpear.com/observationGroup",
+                        "valueString": "ef680d0000000000"
+                    }
+                ],
+                "name": {
+                    "coding": [
+                        {
+                            "system": "CTV3",
+                            "code": "246A.",
+                            "display": "O/E - Diastolic BP reading"
+                        },
+                        {
+                            "system": "http://read.info/ctv3",
+                            "code": "246A.",
+                            "display": "O/E - Diastolic BP reading"
+                        }
+                    ],
+                    "text": "O/E - Diastolic BP reading"
+                },
+                "valueQuantity": {
+                    "value": 110,
+                    "units": "mmHg"
+                },
+                "issued": "2014-09-09T00:00:00+01:00",
+                "status": "final",
+                "reliability": "unknown",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "performer": [
+                    {
+                        "reference": "Practitioner/drpeter0101",
+                        "display": "TAYLOR, Dr Peter (GP Partner)"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "ef680d0000000000-8",
+            "content": {
+                "resourceType": "Observation",
+                "id": "ef680d0000000000-8",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "CTV3",
+                            "code": "X770D",
+                            "display": "Oxygen saturation at periphery"
+                        },
+                        {
+                            "system": "http://read.info/ctv3",
+                            "code": "X770D",
+                            "display": "Oxygen saturation at periphery"
+                        }
+                    ],
+                    "text": "Oxygen saturation at periphery"
+                },
+                "issued": "2014-09-09T00:00:00+01:00",
+                "status": "final",
+                "reliability": "unknown",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "performer": [
+                    {
+                        "reference": "Practitioner/drpeter0101",
+                        "display": "TAYLOR, Dr Peter (GP Partner)"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "ef680d0000000000-9",
+            "content": {
+                "resourceType": "Observation",
+                "id": "ef680d0000000000-9",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "CTV3",
+                            "code": "XM1XQ",
+                            "display": "O/E - soft tissue swelling"
+                        },
+                        {
+                            "system": "http://read.info/ctv3",
+                            "code": "XM1XQ",
+                            "display": "O/E - soft tissue swelling"
+                        }
+                    ],
+                    "text": "O/E - soft tissue swelling"
+                },
+                "issued": "2014-09-09T00:00:00+01:00",
+                "status": "final",
+                "reliability": "unknown",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "performer": [
+                    {
+                        "reference": "Practitioner/drpeter0101",
+                        "display": "TAYLOR, Dr Peter (GP Partner)"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "59b90d0000000000",
+            "content": {
+                "resourceType": "Encounter",
+                "id": "59b90d0000000000",
+                "status": "finished",
+                "class": "ambulatory",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "participant": [
+                    {
+                        "individual": {
+                            "reference": "Practitioner/drpeter0101",
+                            "display": "TAYLOR, Dr Peter (GP Partner)"
+                        }
+                    }
+                ],
+                "period": {
+                    "end": "2015-05-11"
+                },
+                "location": [
+                    {
+                        "location": {
+                            "display": "Surgery"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": "59b90d0000000000",
+            "content": {
+                "resourceType": "Condition",
+                "id": "59b90d0000000000",
+                "extension": [
+                    {
+                        "url": "http://fhir.blackpear.com/activeProblem",
+                        "valueBoolean": true
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "encounter": {
+                    "reference": "Encounter/59b90d0000000000"
+                },
+                "asserter": {
+                    "reference": "Practitioner/drpeter0101",
+                    "display": "TAYLOR, Dr Peter (GP Partner)"
+                },
+                "dateAsserted": "2015-05-11",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "CTV3",
+                            "code": "X50Aa",
+                            "display": "Lipodermatosclerosis"
+                        },
+                        {
+                            "system": "http://read.info/ctv3",
+                            "code": "X50Aa",
+                            "display": "Lipodermatosclerosis"
+                        }
+                    ],
+                    "text": "Lipodermatosclerosis"
+                },
+                "severity": {
+                    "coding": [
+                        {
+                            "system": "SNOMED",
+                            "code": "24484000",
+                            "display": "Severe"
+                        }
+                    ],
+                    "text": "Severe"
+                }
+            }
+        },
+        {
+            "id": "37690d0000000000",
+            "content": {
+                "resourceType": "Encounter",
+                "id": "37690d0000000000",
+                "status": "finished",
+                "class": "ambulatory",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "participant": [
+                    {
+                        "individual": {
+                            "reference": "Practitioner/drpeter0101",
+                            "display": "TAYLOR, Dr Peter (GP Partner)"
+                        }
+                    }
+                ],
+                "period": {
+                    "end": "2015-12-02"
+                },
+                "location": [
+                    {
+                        "location": {
+                            "display": "Surgery"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": "37690d0000000000-2-37690d0000000000-1",
+            "content": {
+                "resourceType": "Observation",
+                "id": "37690d0000000000-2-37690d0000000000-1",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "READ2",
+                            "code": "246..",
+                            "display": "O/E - blood pressure reading"
+                        }
+                    ],
+                    "text": "O/E - blood pressure reading"
+                },
+                "issued": "2015-12-02T00:00:00+00:00",
+                "status": "final",
+                "reliability": "unknown",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "related": [
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/37690d0000000000-2"
+                        }
+                    },
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/37690d0000000000-1"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": "37690d0000000000-2",
+            "content": {
+                "resourceType": "Observation",
+                "id": "37690d0000000000-2",
+                "extension": [
+                    {
+                        "url": "http://fhir.blackpear.com/observationGroup",
+                        "valueString": "37690d0000000000"
+                    }
+                ],
+                "name": {
+                    "coding": [
+                        {
+                            "system": "CTV3",
+                            "code": "2469.",
+                            "display": "O/E - Systolic BP reading"
+                        },
+                        {
+                            "system": "http://read.info/ctv3",
+                            "code": "2469.",
+                            "display": "O/E - Systolic BP reading"
+                        }
+                    ],
+                    "text": "O/E - Systolic BP reading"
+                },
+                "valueQuantity": {
+                    "value": 200,
+                    "units": "mmHg"
+                },
+                "issued": "2015-12-02T00:00:00+00:00",
+                "status": "final",
+                "reliability": "unknown",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "performer": [
+                    {
+                        "reference": "Practitioner/drpeter0101",
+                        "display": "TAYLOR, Dr Peter (GP Partner)"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "37690d0000000000-1",
+            "content": {
+                "resourceType": "Observation",
+                "id": "37690d0000000000-1",
+                "extension": [
+                    {
+                        "url": "http://fhir.blackpear.com/observationGroup",
+                        "valueString": "37690d0000000000"
+                    }
+                ],
+                "name": {
+                    "coding": [
+                        {
+                            "system": "CTV3",
+                            "code": "246A.",
+                            "display": "O/E - Diastolic BP reading"
+                        },
+                        {
+                            "system": "http://read.info/ctv3",
+                            "code": "246A.",
+                            "display": "O/E - Diastolic BP reading"
+                        }
+                    ],
+                    "text": "O/E - Diastolic BP reading"
+                },
+                "valueQuantity": {
+                    "value": 100,
+                    "units": "mmHg"
+                },
+                "issued": "2015-12-02T00:00:00+00:00",
+                "status": "final",
+                "reliability": "unknown",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "performer": [
+                    {
+                        "reference": "Practitioner/drpeter0101",
+                        "display": "TAYLOR, Dr Peter (GP Partner)"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "f7690d0000000000",
+            "content": {
+                "resourceType": "Encounter",
+                "id": "f7690d0000000000",
+                "status": "finished",
+                "class": "ambulatory",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "participant": [
+                    {
+                        "individual": {
+                            "reference": "Practitioner/drpeter0101",
+                            "display": "TAYLOR, Dr Peter (GP Partner)"
+                        }
+                    }
+                ],
+                "period": {
+                    "end": "2015-12-02"
+                },
+                "location": [
+                    {
+                        "location": {
+                            "display": "Surgery"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": "f7690d0000000000",
+            "content": {
+                "resourceType": "Condition",
+                "id": "f7690d0000000000",
+                "extension": [
+                    {
+                        "url": "http://fhir.blackpear.com/activeProblem",
+                        "valueBoolean": true
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "encounter": {
+                    "reference": "Encounter/f7690d0000000000"
+                },
+                "asserter": {
+                    "reference": "Practitioner/drpeter0101",
+                    "display": "TAYLOR, Dr Peter (GP Partner)"
+                },
+                "dateAsserted": "2015-12-02",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "CTV3",
+                            "code": "R021.",
+                            "display": "[D]Rash and other nonspecific skin eruption"
+                        },
+                        {
+                            "system": "http://read.info/ctv3",
+                            "code": "R021.",
+                            "display": "[D]Rash and other nonspecific skin eruption"
+                        }
+                    ],
+                    "text": "[D]Rash and other nonspecific skin eruption"
+                },
+                "severity": {
+                    "coding": [
+                        {
+                            "system": "SNOMED",
+                            "code": "255604002",
+                            "display": "Mild"
+                        }
+                    ],
+                    "text": "Mild"
+                }
+            }
+        },
+        {
+            "id": "27690d0000000000",
+            "content": {
+                "resourceType": "Encounter",
+                "id": "27690d0000000000",
+                "status": "finished",
+                "class": "ambulatory",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "participant": [
+                    {
+                        "individual": {
+                            "reference": "Practitioner/drpeter0101",
+                            "display": "TAYLOR, Dr Peter (GP Partner)"
+                        }
+                    }
+                ],
+                "period": {
+                    "end": "2015-12-14"
+                },
+                "location": [
+                    {
+                        "location": {
+                            "display": "Surgery"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": "27690d0000000000-1",
+            "content": {
+                "resourceType": "Observation",
+                "id": "27690d0000000000-1",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "CTV3",
+                            "code": "XE2eD",
+                            "display": "Serum cholesterol level"
+                        },
+                        {
+                            "system": "http://read.info/ctv3",
+                            "code": "XE2eD",
+                            "display": "Serum cholesterol level"
+                        }
+                    ],
+                    "text": "Serum cholesterol level"
+                },
+                "valueQuantity": {
+                    "value": 4.3,
+                    "units": "mmol/L"
+                },
+                "issued": "2015-12-14T00:00:00+00:00",
+                "status": "final",
+                "reliability": "unknown",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "performer": [
+                    {
+                        "reference": "Practitioner/drpeter0101",
+                        "display": "TAYLOR, Dr Peter (GP Partner)"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "27690d0000000000-2",
+            "content": {
+                "resourceType": "Observation",
+                "id": "27690d0000000000-2",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "CTV3",
+                            "code": "XaEUq",
+                            "display": "Serum cholesterol/HDL ratio"
+                        },
+                        {
+                            "system": "http://read.info/ctv3",
+                            "code": "XaEUq",
+                            "display": "Serum cholesterol/HDL ratio"
+                        }
+                    ],
+                    "text": "Serum cholesterol/HDL ratio"
+                },
+                "valueQuantity": {
+                    "value": 3.3,
+                    "units": "mmol/mmol"
+                },
+                "issued": "2015-12-14T00:00:00+00:00",
+                "status": "final",
+                "reliability": "unknown",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "performer": [
+                    {
+                        "reference": "Practitioner/drpeter0101",
+                        "display": "TAYLOR, Dr Peter (GP Partner)"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "27690d0000000000-3",
+            "content": {
+                "resourceType": "Observation",
+                "id": "27690d0000000000-3",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "CTV3",
+                            "code": "42A..",
+                            "display": "Mean cell volume"
+                        },
+                        {
+                            "system": "http://read.info/ctv3",
+                            "code": "42A..",
+                            "display": "Mean cell volume"
+                        }
+                    ],
+                    "text": "Mean cell volume"
+                },
+                "valueQuantity": {
+                    "value": 95.7,
+                    "units": "fL"
+                },
+                "issued": "2015-12-14T00:00:00+00:00",
+                "status": "final",
+                "reliability": "unknown",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "performer": [
+                    {
+                        "reference": "Practitioner/drpeter0101",
+                        "display": "TAYLOR, Dr Peter (GP Partner)"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "27690d0000000000-4",
+            "content": {
+                "resourceType": "Observation",
+                "id": "27690d0000000000-4",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "CTV3",
+                            "code": "42P..",
+                            "display": "Platelet count - observation"
+                        },
+                        {
+                            "system": "http://read.info/ctv3",
+                            "code": "42P..",
+                            "display": "Platelet count - observation"
+                        }
+                    ],
+                    "text": "Platelet count - observation"
+                },
+                "valueQuantity": {
+                    "value": 212,
+                    "units": "10^9/L"
+                },
+                "issued": "2015-12-14T00:00:00+00:00",
+                "status": "final",
+                "reliability": "unknown",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "performer": [
+                    {
+                        "reference": "Practitioner/drpeter0101",
+                        "display": "TAYLOR, Dr Peter (GP Partner)"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "27690d0000000000-5",
+            "content": {
+                "resourceType": "Observation",
+                "id": "27690d0000000000-5",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "CTV3",
+                            "code": "42M..",
+                            "display": "Lymphocyte count"
+                        },
+                        {
+                            "system": "http://read.info/ctv3",
+                            "code": "42M..",
+                            "display": "Lymphocyte count"
+                        }
+                    ],
+                    "text": "Lymphocyte count"
+                },
+                "valueQuantity": {
+                    "value": 2.61,
+                    "units": "10^9/L"
+                },
+                "issued": "2015-12-14T00:00:00+00:00",
+                "status": "final",
+                "reliability": "unknown",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "performer": [
+                    {
+                        "reference": "Practitioner/drpeter0101",
+                        "display": "TAYLOR, Dr Peter (GP Partner)"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "27690d0000000000-6",
+            "content": {
+                "resourceType": "Observation",
+                "id": "27690d0000000000-6",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "CTV3",
+                            "code": "XE2eA",
+                            "display": "Serum albumin level"
+                        },
+                        {
+                            "system": "http://read.info/ctv3",
+                            "code": "XE2eA",
+                            "display": "Serum albumin level"
+                        }
+                    ],
+                    "text": "Serum albumin level"
+                },
+                "valueQuantity": {
+                    "value": 33,
+                    "units": "g/L"
+                },
+                "issued": "2015-12-14T00:00:00+00:00",
+                "status": "final",
+                "reliability": "unknown",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "performer": [
+                    {
+                        "reference": "Practitioner/drpeter0101",
+                        "display": "TAYLOR, Dr Peter (GP Partner)"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "27690d0000000000-7",
+            "content": {
+                "resourceType": "Observation",
+                "id": "27690d0000000000-7",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "CTV3",
+                            "code": "XaIdY",
+                            "display": "Total white blood count"
+                        },
+                        {
+                            "system": "http://read.info/ctv3",
+                            "code": "XaIdY",
+                            "display": "Total white blood count"
+                        }
+                    ],
+                    "text": "Total white blood count"
+                },
+                "valueQuantity": {
+                    "value": 8.9,
+                    "units": "10^9/L"
+                },
+                "issued": "2015-12-14T00:00:00+00:00",
+                "status": "final",
+                "reliability": "unknown",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "performer": [
+                    {
+                        "reference": "Practitioner/drpeter0101",
+                        "display": "TAYLOR, Dr Peter (GP Partner)"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "27690d0000000000-8",
+            "content": {
+                "resourceType": "Observation",
+                "id": "27690d0000000000-8",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "CTV3",
+                            "code": "42J..",
+                            "display": "Neutrophil count"
+                        },
+                        {
+                            "system": "http://read.info/ctv3",
+                            "code": "42J..",
+                            "display": "Neutrophil count"
+                        }
+                    ],
+                    "text": "Neutrophil count"
+                },
+                "valueQuantity": {
+                    "value": 5.14,
+                    "units": "10^9/L"
+                },
+                "issued": "2015-12-14T00:00:00+00:00",
+                "status": "final",
+                "reliability": "unknown",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "performer": [
+                    {
+                        "reference": "Practitioner/drpeter0101",
+                        "display": "TAYLOR, Dr Peter (GP Partner)"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "27690d0000000000-9",
+            "content": {
+                "resourceType": "Observation",
+                "id": "27690d0000000000-9",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "CTV3",
+                            "code": "XacUK",
+                            "display": "eGFR using creatinine (CKD-EPI) per 1.73 square metres"
+                        },
+                        {
+                            "system": "http://read.info/ctv3",
+                            "code": "XacUK",
+                            "display": "eGFR using creatinine (CKD-EPI) per 1.73 square metres"
+                        }
+                    ],
+                    "text": "eGFR using creatinine (CKD-EPI) per 1.73 square metres"
+                },
+                "valueQuantity": {
+                    "value": 80,
+                    "units": "mL/min"
+                },
+                "issued": "2015-12-14T00:00:00+00:00",
+                "status": "final",
+                "reliability": "unknown",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "performer": [
+                    {
+                        "reference": "Practitioner/drpeter0101",
+                        "display": "TAYLOR, Dr Peter (GP Partner)"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "27690d0000000000-10",
+            "content": {
+                "resourceType": "Observation",
+                "id": "27690d0000000000-10",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "CTV3",
+                            "code": "XaWP9",
+                            "display": "HbA1c target level - IFCC standardised"
+                        },
+                        {
+                            "system": "http://read.info/ctv3",
+                            "code": "XaWP9",
+                            "display": "HbA1c target level - IFCC standardised"
+                        }
+                    ],
+                    "text": "HbA1c target level - IFCC standardised"
+                },
+                "valueQuantity": {
+                    "value": 99,
+                    "units": "mmol/mol"
+                },
+                "issued": "2015-12-14T00:00:00+00:00",
+                "status": "final",
+                "reliability": "unknown",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "performer": [
+                    {
+                        "reference": "Practitioner/drpeter0101",
+                        "display": "TAYLOR, Dr Peter (GP Partner)"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "27690d0000000000-11",
+            "content": {
+                "resourceType": "Observation",
+                "id": "27690d0000000000-11",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "CTV3",
+                            "code": "XaELV",
+                            "display": "Serum TSH level"
+                        },
+                        {
+                            "system": "http://read.info/ctv3",
+                            "code": "XaELV",
+                            "display": "Serum TSH level"
+                        }
+                    ],
+                    "text": "Serum TSH level"
+                },
+                "valueQuantity": {
+                    "value": 2.2,
+                    "units": "miu/L"
+                },
+                "issued": "2015-12-14T00:00:00+00:00",
+                "status": "final",
+                "reliability": "unknown",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "performer": [
+                    {
+                        "reference": "Practitioner/drpeter0101",
+                        "display": "TAYLOR, Dr Peter (GP Partner)"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "e7690d0000000000",
+            "content": {
+                "resourceType": "Encounter",
+                "id": "e7690d0000000000",
+                "status": "finished",
+                "class": "ambulatory",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "participant": [
+                    {
+                        "individual": {
+                            "reference": "Practitioner/drpeter0101",
+                            "display": "TAYLOR, Dr Peter (GP Partner)"
+                        }
+                    }
+                ],
+                "period": {
+                    "end": "2016-01-20"
+                },
+                "location": [
+                    {
+                        "location": {
+                            "display": "Surgery"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": "e7690d0000000000",
+            "content": {
+                "resourceType": "Condition",
+                "id": "e7690d0000000000",
+                "extension": [
+                    {
+                        "url": "http://fhir.blackpear.com/activeProblem",
+                        "valueBoolean": true
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "encounter": {
+                    "reference": "Encounter/e7690d0000000000"
+                },
+                "asserter": {
+                    "reference": "Practitioner/drpeter0101",
+                    "display": "TAYLOR, Dr Peter (GP Partner)"
+                },
+                "dateAsserted": "2016-01-20",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "CTV3",
+                            "code": "G849z",
+                            "display": "Anal and rectal skin tags NOS"
+                        },
+                        {
+                            "system": "http://read.info/ctv3",
+                            "code": "G849z",
+                            "display": "Anal and rectal skin tags NOS"
+                        }
+                    ],
+                    "text": "Anal and rectal skin tags NOS"
+                },
+                "severity": {
+                    "coding": [
+                        {
+                            "system": "SNOMED",
+                            "code": "255604002",
+                            "display": "Mild"
+                        }
+                    ],
+                    "text": "Mild"
+                }
+            }
+        },
+        {
+            "id": "97690d0000000000",
+            "content": {
+                "resourceType": "Encounter",
+                "id": "97690d0000000000",
+                "status": "finished",
+                "class": "ambulatory",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "participant": [
+                    {
+                        "individual": {
+                            "reference": "Practitioner/drpeter0101",
+                            "display": "TAYLOR, Dr Peter (GP Partner)"
+                        }
+                    }
+                ],
+                "period": {
+                    "end": "2016-01-20"
+                },
+                "location": [
+                    {
+                        "location": {
+                            "display": "Surgery"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": "97690d0000000000-1",
+            "content": {
+                "resourceType": "Observation",
+                "id": "97690d0000000000-1",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "CTV3",
+                            "code": "X7A9v",
+                            "display": "Biopsy sample"
+                        },
+                        {
+                            "system": "http://read.info/ctv3",
+                            "code": "X7A9v",
+                            "display": "Biopsy sample"
+                        }
+                    ],
+                    "text": "Biopsy sample"
+                },
+                "issued": "2016-01-20T00:00:00+00:00",
+                "status": "final",
+                "reliability": "unknown",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "performer": [
+                    {
+                        "reference": "Practitioner/drpeter0101",
+                        "display": "TAYLOR, Dr Peter (GP Partner)"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "97690d0000000000-2",
+            "content": {
+                "resourceType": "Observation",
+                "id": "97690d0000000000-2",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "CTV3",
+                            "code": "XaIqz",
+                            "display": "Histology laboratory test"
+                        },
+                        {
+                            "system": "http://read.info/ctv3",
+                            "code": "XaIqz",
+                            "display": "Histology laboratory test"
+                        }
+                    ],
+                    "text": "Histology laboratory test"
+                },
+                "comments": "See report text\nMICRO:\nThis skin biopsy contain a large fibroepithelial pole. There is no evidence of Malignancy\nReporting pathologist DR F. IORDANIDIS",
+                "issued": "2016-01-20T00:00:00+00:00",
+                "status": "final",
+                "reliability": "unknown",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "performer": [
+                    {
+                        "reference": "Practitioner/drpeter0101",
+                        "display": "TAYLOR, Dr Peter (GP Partner)"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "77690d0000000000",
+            "content": {
+                "resourceType": "Encounter",
+                "id": "77690d0000000000",
+                "status": "finished",
+                "class": "ambulatory",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "participant": [
+                    {
+                        "individual": {
+                            "reference": "Practitioner/drpeter0101",
+                            "display": "TAYLOR, Dr Peter (GP Partner)"
+                        }
+                    }
+                ],
+                "period": {
+                    "end": "2016-05-12"
+                },
+                "location": [
+                    {
+                        "location": {
+                            "display": "Surgery"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": "77690d0000000000-1",
+            "content": {
+                "resourceType": "MedicationPrescription",
+                "id": "77690d0000000000-1",
+                "extension": [
+                    {
+                        "url": "http://fhir.blackpear.com/prescriptionType",
+                        "valueString": "RepeatMaster"
+                    },
+                    {
+                        "url": "http://fhir.blackpear.com/lastIssueDate",
+                        "valueString": "2016-05-12"
+                    }
+                ],
+                "dateWritten": "2016-05-12",
+                "status": "active",
+                "patient": {
+                    "reference": "Patient/9990073228"
+                },
+                "prescriber": {
+                    "reference": "Practitioner/drpeter0101",
+                    "display": "TAYLOR, Dr Peter (GP Partner)"
+                },
+                "encounter": {
+                    "reference": "Encounter/77690d0000000000"
+                },
+                "medication": {
+                    "reference": "Medication/med.77690d0000000000-1",
+                    "display": "Metformin 500mg tablets"
+                },
+                "dosageInstruction": [
+                    {
+                        "text": "take one 3 times/day"
+                    }
+                ],
+                "dispense": {
+                    "validityPeriod": {
+                        "start": "2016-05-12"
+                    },
+                    "numberOfRepeatsAllowed": 6,
+                    "quantity": {
+                        "value": 28,
+                        "units": "tablet"
+                    },
+                    "expectedSupplyDuration": {
+                        "value": 14,
+                        "units": "Days",
+                        "system": "http://unitsofmeasure.org/",
+                        "code": "d"
+                    }
+                }
+            }
+        },
+        {
+            "id": "77690d0000000000-2",
+            "content": {
+                "resourceType": "MedicationPrescription",
+                "id": "77690d0000000000-2",
+                "extension": [
+                    {
+                        "url": "http://fhir.blackpear.com/prescriptionType",
+                        "valueString": "RepeatMaster"
+                    },
+                    {
+                        "url": "http://fhir.blackpear.com/lastIssueDate",
+                        "valueString": "2017-02-26"
+                    }
+                ],
+                "dateWritten": "2017-02-26",
+                "status": "active",
+                "patient": {
+                    "reference": "Patient/9990073228"
+                },
+                "prescriber": {
+                    "reference": "Practitioner/drpeter0101",
+                    "display": "TAYLOR, Dr Peter (GP Partner)"
+                },
+                "encounter": {
+                    "reference": "Encounter/77690d0000000000"
+                },
+                "medication": {
+                    "reference": "Medication/med.77690d0000000000-2",
+                    "display": "Saxagliptin 5mg tablets"
+                },
+                "dosageInstruction": [
+                    {
+                        "text": "take one daily"
+                    }
+                ],
+                "dispense": {
+                    "validityPeriod": {
+                        "start": "2017-02-26"
+                    },
+                    "numberOfRepeatsAllowed": 6,
+                    "quantity": {
+                        "value": 28,
+                        "units": "tablet"
+                    },
+                    "expectedSupplyDuration": {
+                        "value": 28,
+                        "units": "Days",
+                        "system": "http://unitsofmeasure.org/",
+                        "code": "d"
+                    }
+                }
+            }
+        },
+        {
+            "id": "77690d0000000000-3",
+            "content": {
+                "resourceType": "MedicationPrescription",
+                "id": "77690d0000000000-3",
+                "extension": [
+                    {
+                        "url": "http://fhir.blackpear.com/prescriptionType",
+                        "valueString": "RepeatMaster"
+                    },
+                    {
+                        "url": "http://fhir.blackpear.com/lastIssueDate",
+                        "valueString": "2017-08-17"
+                    }
+                ],
+                "dateWritten": "2017-08-17",
+                "status": "active",
+                "patient": {
+                    "reference": "Patient/9990073228"
+                },
+                "prescriber": {
+                    "reference": "Practitioner/drpeter0101",
+                    "display": "TAYLOR, Dr Peter (GP Partner)"
+                },
+                "encounter": {
+                    "reference": "Encounter/77690d0000000000"
+                },
+                "medication": {
+                    "reference": "Medication/med.77690d0000000000-3",
+                    "display": "Sharpsguard disposal unit 1litre Orange (Daniels Healthcare Ltd)"
+                },
+                "dosageInstruction": [
+                    {
+                        "text": "use as directed"
+                    }
+                ],
+                "dispense": {
+                    "validityPeriod": {
+                        "start": "2017-08-17"
+                    },
+                    "numberOfRepeatsAllowed": 3,
+                    "quantity": {
+                        "value": 1,
+                        "units": "device"
+                    },
+                    "expectedSupplyDuration": {
+                        "value": 10,
+                        "units": "Days",
+                        "system": "http://unitsofmeasure.org/",
+                        "code": "d"
+                    }
+                }
+            }
+        },
+        {
+            "id": "77690d0000000000-4",
+            "content": {
+                "resourceType": "MedicationPrescription",
+                "id": "77690d0000000000-4",
+                "extension": [
+                    {
+                        "url": "http://fhir.blackpear.com/prescriptionType",
+                        "valueString": "RepeatMaster"
+                    },
+                    {
+                        "url": "http://fhir.blackpear.com/lastIssueDate",
+                        "valueString": "2017-08-17"
+                    }
+                ],
+                "dateWritten": "2017-08-17",
+                "status": "active",
+                "patient": {
+                    "reference": "Patient/9990073228"
+                },
+                "prescriber": {
+                    "reference": "Practitioner/drpeter0101",
+                    "display": "TAYLOR, Dr Peter (GP Partner)"
+                },
+                "encounter": {
+                    "reference": "Encounter/77690d0000000000"
+                },
+                "medication": {
+                    "reference": "Medication/med.77690d0000000000-4",
+                    "display": "WaveSense JAZZ testing strips (AgaMatrix Europe Ltd)"
+                },
+                "dosageInstruction": [
+                    {
+                        "text": "use as directed"
+                    }
+                ],
+                "dispense": {
+                    "validityPeriod": {
+                        "start": "2017-08-17"
+                    },
+                    "numberOfRepeatsAllowed": 1,
+                    "quantity": {
+                        "value": 50,
+                        "units": "strip"
+                    },
+                    "expectedSupplyDuration": {
+                        "value": 5,
+                        "units": "Days",
+                        "system": "http://unitsofmeasure.org/",
+                        "code": "d"
+                    }
+                }
+            }
+        },
+        {
+            "id": "77690d0000000000-5",
+            "content": {
+                "resourceType": "MedicationPrescription",
+                "id": "77690d0000000000-5",
+                "extension": [
+                    {
+                        "url": "http://fhir.blackpear.com/prescriptionType",
+                        "valueString": "RepeatIssue"
+                    }
+                ],
+                "dateWritten": "2016-05-12",
+                "status": "completed",
+                "patient": {
+                    "reference": "Patient/9990073228"
+                },
+                "prescriber": {
+                    "reference": "Practitioner/drpeter0101",
+                    "display": "TAYLOR, Dr Peter (GP Partner)"
+                },
+                "encounter": {
+                    "reference": "Encounter/77690d0000000000"
+                },
+                "medication": {
+                    "reference": "Medication/med.77690d0000000000-5",
+                    "display": "Metformin 500mg tablets"
+                },
+                "dosageInstruction": [
+                    {
+                        "text": "take one 3 times/day"
+                    }
+                ],
+                "dispense": {
+                    "validityPeriod": {
+                        "start": "2016-05-12",
+                        "end": "2016-05-26"
+                    },
+                    "quantity": {
+                        "value": 28,
+                        "units": "tablet"
+                    }
+                }
+            }
+        },
+        {
+            "id": "77690d0000000000-6",
+            "content": {
+                "resourceType": "MedicationPrescription",
+                "id": "77690d0000000000-6",
+                "extension": [
+                    {
+                        "url": "http://fhir.blackpear.com/prescriptionType",
+                        "valueString": "RepeatIssue"
+                    }
+                ],
+                "dateWritten": "2017-02-26",
+                "status": "completed",
+                "patient": {
+                    "reference": "Patient/9990073228"
+                },
+                "prescriber": {
+                    "reference": "Practitioner/drpeter0101",
+                    "display": "TAYLOR, Dr Peter (GP Partner)"
+                },
+                "encounter": {
+                    "reference": "Encounter/77690d0000000000"
+                },
+                "medication": {
+                    "reference": "Medication/med.77690d0000000000-6",
+                    "display": "Saxagliptin 5mg tablets"
+                },
+                "dosageInstruction": [
+                    {
+                        "text": "take one daily"
+                    }
+                ],
+                "dispense": {
+                    "validityPeriod": {
+                        "start": "2017-02-26",
+                        "end": "2017-03-26"
+                    },
+                    "quantity": {
+                        "value": 28,
+                        "units": "tablet"
+                    }
+                }
+            }
+        },
+        {
+            "id": "77690d0000000000-7",
+            "content": {
+                "resourceType": "MedicationPrescription",
+                "id": "77690d0000000000-7",
+                "extension": [
+                    {
+                        "url": "http://fhir.blackpear.com/prescriptionType",
+                        "valueString": "RepeatIssue"
+                    }
+                ],
+                "dateWritten": "2017-08-17",
+                "status": "active",
+                "patient": {
+                    "reference": "Patient/9990073228"
+                },
+                "prescriber": {
+                    "reference": "Practitioner/drpeter0101",
+                    "display": "TAYLOR, Dr Peter (GP Partner)"
+                },
+                "encounter": {
+                    "reference": "Encounter/77690d0000000000"
+                },
+                "medication": {
+                    "reference": "Medication/med.77690d0000000000-7",
+                    "display": "Sharpsguard disposal unit 1litre Orange (Daniels Healthcare Ltd)"
+                },
+                "dosageInstruction": [
+                    {
+                        "text": "use as directed"
+                    }
+                ],
+                "dispense": {
+                    "validityPeriod": {
+                        "start": "2017-08-17",
+                        "end": "2017-08-27"
+                    },
+                    "quantity": {
+                        "value": 1,
+                        "units": "device"
+                    }
+                }
+            }
+        },
+        {
+            "id": "77690d0000000000-8",
+            "content": {
+                "resourceType": "MedicationPrescription",
+                "id": "77690d0000000000-8",
+                "extension": [
+                    {
+                        "url": "http://fhir.blackpear.com/prescriptionType",
+                        "valueString": "RepeatIssue"
+                    }
+                ],
+                "dateWritten": "2017-08-17",
+                "status": "active",
+                "patient": {
+                    "reference": "Patient/9990073228"
+                },
+                "prescriber": {
+                    "reference": "Practitioner/drpeter0101",
+                    "display": "TAYLOR, Dr Peter (GP Partner)"
+                },
+                "encounter": {
+                    "reference": "Encounter/77690d0000000000"
+                },
+                "medication": {
+                    "reference": "Medication/med.77690d0000000000-8",
+                    "display": "WaveSense JAZZ testing strips (AgaMatrix Europe Ltd)"
+                },
+                "dosageInstruction": [
+                    {
+                        "text": "use as directed"
+                    }
+                ],
+                "dispense": {
+                    "validityPeriod": {
+                        "start": "2017-08-17",
+                        "end": "2017-08-22"
+                    },
+                    "quantity": {
+                        "value": 50,
+                        "units": "strip"
+                    }
+                }
+            }
+        },
+        {
+            "id": "57690d0000000000",
+            "content": {
+                "resourceType": "Encounter",
+                "id": "57690d0000000000",
+                "status": "finished",
+                "class": "ambulatory",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "participant": [
+                    {
+                        "individual": {
+                            "reference": "Practitioner/drpeter0101",
+                            "display": "TAYLOR, Dr Peter (GP Partner)"
+                        }
+                    }
+                ],
+                "period": {
+                    "end": "2016-09-05"
+                },
+                "location": [
+                    {
+                        "location": {
+                            "display": "Surgery"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": "57690d0000000000",
+            "content": {
+                "resourceType": "Observation",
+                "id": "57690d0000000000",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "CTV3",
+                            "code": "Y3579",
+                            "display": "Diabetic review"
+                        },
+                        {
+                            "system": "http://read.info/ctv3",
+                            "code": "Y3579",
+                            "display": "Diabetic review"
+                        }
+                    ],
+                    "text": "Diabetic review"
+                },
+                "issued": "2016-09-05T00:00:00+01:00",
+                "status": "final",
+                "reliability": "unknown",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "performer": [
+                    {
+                        "reference": "Practitioner/drpeter0101",
+                        "display": "TAYLOR, Dr Peter (GP Partner)"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "67690d0000000000",
+            "content": {
+                "resourceType": "Encounter",
+                "id": "67690d0000000000",
+                "status": "finished",
+                "class": "ambulatory",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "participant": [
+                    {
+                        "individual": {
+                            "reference": "Practitioner/drpeter0101",
+                            "display": "TAYLOR, Dr Peter (GP Partner)"
+                        }
+                    }
+                ],
+                "period": {
+                    "end": "2016-09-05"
+                },
+                "location": [
+                    {
+                        "location": {
+                            "display": "Surgery"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": "67690d0000000000-1",
+            "content": {
+                "resourceType": "Observation",
+                "id": "67690d0000000000-1",
+                "name": {
+                    "text": "Free text observation"
+                },
+                "comments": "",
+                "issued": "2016-09-05T00:00:00+01:00",
+                "status": "final",
+                "reliability": "unknown",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "performer": [
+                    {
+                        "reference": "Practitioner/drpeter0101",
+                        "display": "TAYLOR, Dr Peter (GP Partner)"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "67690d0000000000-2",
+            "content": {
+                "resourceType": "Observation",
+                "id": "67690d0000000000-2",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "CTV3",
+                            "code": "XaX3o",
+                            "display": "Diabetic dietary review"
+                        },
+                        {
+                            "system": "http://read.info/ctv3",
+                            "code": "XaX3o",
+                            "display": "Diabetic dietary review"
+                        }
+                    ],
+                    "text": "Diabetic dietary review"
+                },
+                "comments": "getting on well with saxagliptin. slightly raised HbA1c still review 3/12.",
+                "issued": "2016-09-05T00:00:00+01:00",
+                "status": "final",
+                "reliability": "unknown",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "performer": [
+                    {
+                        "reference": "Practitioner/drpeter0101",
+                        "display": "TAYLOR, Dr Peter (GP Partner)"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "67690d0000000000-3",
+            "content": {
+                "resourceType": "Observation",
+                "id": "67690d0000000000-3",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "CTV3",
+                            "code": "XE0oh",
+                            "display": "Never smoked tobacco"
+                        },
+                        {
+                            "system": "http://read.info/ctv3",
+                            "code": "XE0oh",
+                            "display": "Never smoked tobacco"
+                        }
+                    ],
+                    "text": "Never smoked tobacco"
+                },
+                "issued": "2016-09-05T00:00:00+01:00",
+                "status": "final",
+                "reliability": "unknown",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "performer": [
+                    {
+                        "reference": "Practitioner/drpeter0101",
+                        "display": "TAYLOR, Dr Peter (GP Partner)"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "67690d0000000000-4",
+            "content": {
+                "resourceType": "Observation",
+                "id": "67690d0000000000-4",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "CTV3",
+                            "code": "XE1h4",
+                            "display": "O/E - weight greater than 20% over ideal"
+                        },
+                        {
+                            "system": "http://read.info/ctv3",
+                            "code": "XE1h4",
+                            "display": "O/E - weight greater than 20% over ideal"
+                        }
+                    ],
+                    "text": "O/E - weight greater than 20% over ideal"
+                },
+                "valueQuantity": {
+                    "value": 166,
+                    "units": "Kg"
+                },
+                "issued": "2016-09-05T00:00:00+01:00",
+                "status": "final",
+                "reliability": "unknown",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "performer": [
+                    {
+                        "reference": "Practitioner/drpeter0101",
+                        "display": "TAYLOR, Dr Peter (GP Partner)"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "med.d9b90d0000000000-2",
+            "content": {
+                "resourceType": "Medication",
+                "id": "med.d9b90d0000000000-2",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "Multilex",
+                            "code": "1006402",
+                            "display": "Perindopril erbumine 2mg tablets"
+                        }
+                    ],
+                    "text": "Perindopril erbumine 2mg tablets"
+                }
+            }
+        },
+        {
+            "id": "med.d9b90d0000000000-3",
+            "content": {
+                "resourceType": "Medication",
+                "id": "med.d9b90d0000000000-3",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "Multilex",
+                            "code": "1006402",
+                            "display": "Perindopril erbumine 2mg tablets"
+                        }
+                    ],
+                    "text": "Perindopril erbumine 2mg tablets"
+                }
+            }
+        },
+        {
+            "id": "med.df680d0000000000-1",
+            "content": {
+                "resourceType": "Medication",
+                "id": "med.df680d0000000000-1",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "Multilex",
+                            "code": "1003843",
+                            "display": "Hydrocortisone acetate 1% / Fusidic acid 2% cream"
+                        }
+                    ],
+                    "text": "Hydrocortisone acetate 1% / Fusidic acid 2% cream"
+                }
+            }
+        },
+        {
+            "id": "med.df680d0000000000-2",
+            "content": {
+                "resourceType": "Medication",
+                "id": "med.df680d0000000000-2",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "Multilex",
+                            "code": "1003843",
+                            "display": "Hydrocortisone acetate 1% / Fusidic acid 2% cream"
+                        }
+                    ],
+                    "text": "Hydrocortisone acetate 1% / Fusidic acid 2% cream"
+                }
+            }
+        },
+        {
+            "id": "med.1ab90d0000000000-2",
+            "content": {
+                "resourceType": "Medication",
+                "id": "med.1ab90d0000000000-2",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "Multilex",
+                            "code": "1006785",
+                            "display": "Co-fluampicil 250mg/250mg capsules"
+                        }
+                    ],
+                    "text": "Co-fluampicil 250mg/250mg capsules"
+                }
+            }
+        },
+        {
+            "id": "med.1ab90d0000000000-3",
+            "content": {
+                "resourceType": "Medication",
+                "id": "med.1ab90d0000000000-3",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "Multilex",
+                            "code": "1002885",
+                            "display": "Furosemide 20mg tablets"
+                        }
+                    ],
+                    "text": "Furosemide 20mg tablets"
+                }
+            }
+        },
+        {
+            "id": "med.1ab90d0000000000-4",
+            "content": {
+                "resourceType": "Medication",
+                "id": "med.1ab90d0000000000-4",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "Multilex",
+                            "code": "5049603",
+                            "display": "Polycal liquid (Flavour Not Specified)"
+                        }
+                    ],
+                    "text": "Polycal liquid (Flavour Not Specified)"
+                }
+            }
+        },
+        {
+            "id": "med.1ab90d0000000000-5",
+            "content": {
+                "resourceType": "Medication",
+                "id": "med.1ab90d0000000000-5",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "Multilex",
+                            "code": "1006785",
+                            "display": "Co-fluampicil 250mg/250mg capsules"
+                        }
+                    ],
+                    "text": "Co-fluampicil 250mg/250mg capsules"
+                }
+            }
+        },
+        {
+            "id": "med.1ab90d0000000000-6",
+            "content": {
+                "resourceType": "Medication",
+                "id": "med.1ab90d0000000000-6",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "Multilex",
+                            "code": "1002885",
+                            "display": "Furosemide 20mg tablets"
+                        }
+                    ],
+                    "text": "Furosemide 20mg tablets"
+                }
+            }
+        },
+        {
+            "id": "med.1ab90d0000000000-7",
+            "content": {
+                "resourceType": "Medication",
+                "id": "med.1ab90d0000000000-7",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "Multilex",
+                            "code": "5049603",
+                            "display": "Polycal liquid (Flavour Not Specified)"
+                        }
+                    ],
+                    "text": "Polycal liquid (Flavour Not Specified)"
+                }
+            }
+        },
+        {
+            "id": "med.ef680d0000000000-2",
+            "content": {
+                "resourceType": "Medication",
+                "id": "med.ef680d0000000000-2",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "Multilex",
+                            "code": "3008876",
+                            "display": "Co-codamol 30mg/500mg tablets"
+                        }
+                    ],
+                    "text": "Co-codamol 30mg/500mg tablets"
+                }
+            }
+        },
+        {
+            "id": "med.ef680d0000000000-3",
+            "content": {
+                "resourceType": "Medication",
+                "id": "med.ef680d0000000000-3",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "Multilex",
+                            "code": "3008876",
+                            "display": "Co-codamol 30mg/500mg tablets"
+                        }
+                    ],
+                    "text": "Co-codamol 30mg/500mg tablets"
+                }
+            }
+        },
+        {
+            "id": "med.77690d0000000000-1",
+            "content": {
+                "resourceType": "Medication",
+                "id": "med.77690d0000000000-1",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "Multilex",
+                            "code": "1002912",
+                            "display": "Metformin 500mg tablets"
+                        }
+                    ],
+                    "text": "Metformin 500mg tablets"
+                }
+            }
+        },
+        {
+            "id": "med.77690d0000000000-2",
+            "content": {
+                "resourceType": "Medication",
+                "id": "med.77690d0000000000-2",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "Multilex",
+                            "code": "1017424",
+                            "display": "Saxagliptin 5mg tablets"
+                        }
+                    ],
+                    "text": "Saxagliptin 5mg tablets"
+                }
+            }
+        },
+        {
+            "id": "med.77690d0000000000-3",
+            "content": {
+                "resourceType": "Medication",
+                "id": "med.77690d0000000000-3",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "Multilex",
+                            "code": "5020091",
+                            "display": "Sharpsguard disposal unit 1litre Orange (Daniels Healthcare Ltd)"
+                        }
+                    ],
+                    "text": "Sharpsguard disposal unit 1litre Orange (Daniels Healthcare Ltd)"
+                }
+            }
+        },
+        {
+            "id": "med.77690d0000000000-4",
+            "content": {
+                "resourceType": "Medication",
+                "id": "med.77690d0000000000-4",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "Multilex",
+                            "code": "5021057",
+                            "display": "WaveSense JAZZ testing strips (AgaMatrix Europe Ltd)"
+                        }
+                    ],
+                    "text": "WaveSense JAZZ testing strips (AgaMatrix Europe Ltd)"
+                }
+            }
+        },
+        {
+            "id": "med.77690d0000000000-5",
+            "content": {
+                "resourceType": "Medication",
+                "id": "med.77690d0000000000-5",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "Multilex",
+                            "code": "1002912",
+                            "display": "Metformin 500mg tablets"
+                        }
+                    ],
+                    "text": "Metformin 500mg tablets"
+                }
+            }
+        },
+        {
+            "id": "med.77690d0000000000-6",
+            "content": {
+                "resourceType": "Medication",
+                "id": "med.77690d0000000000-6",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "Multilex",
+                            "code": "1017424",
+                            "display": "Saxagliptin 5mg tablets"
+                        }
+                    ],
+                    "text": "Saxagliptin 5mg tablets"
+                }
+            }
+        },
+        {
+            "id": "med.77690d0000000000-7",
+            "content": {
+                "resourceType": "Medication",
+                "id": "med.77690d0000000000-7",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "Multilex",
+                            "code": "5020091",
+                            "display": "Sharpsguard disposal unit 1litre Orange (Daniels Healthcare Ltd)"
+                        }
+                    ],
+                    "text": "Sharpsguard disposal unit 1litre Orange (Daniels Healthcare Ltd)"
+                }
+            }
+        },
+        {
+            "id": "med.77690d0000000000-8",
+            "content": {
+                "resourceType": "Medication",
+                "id": "med.77690d0000000000-8",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "Multilex",
+                            "code": "5021057",
+                            "display": "WaveSense JAZZ testing strips (AgaMatrix Europe Ltd)"
+                        }
+                    ],
+                    "text": "WaveSense JAZZ testing strips (AgaMatrix Europe Ltd)"
+                }
+            }
+        },
+        {
+            "id": "a9b90d0000000000",
+            "content": {
+                "resourceType": "Observation",
+                "id": "a9b90d0000000000",
+                "extension": [
+                    {
+                        "url": "http://fhir.blackpear.com/observationGroup",
+                        "valueString": "a9b90d0000000000"
+                    }
+                ],
+                "name": {
+                    "coding": [
+                        {
+                            "system": "CTV3",
+                            "code": "2469.",
+                            "display": "O/E - Systolic BP reading"
+                        },
+                        {
+                            "system": "http://read.info/ctv3",
+                            "code": "2469.",
+                            "display": "O/E - Systolic BP reading"
+                        }
+                    ],
+                    "text": "O/E - Systolic BP reading"
+                },
+                "valueQuantity": {
+                    "value": 140,
+                    "units": "mmHg"
+                },
+                "issued": "1995-08-09T00:00:00+01:00",
+                "status": "final",
+                "reliability": "unknown",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "performer": [
+                    {
+                        "reference": "Practitioner/drpeter0101",
+                        "display": "TAYLOR, Dr Peter (GP Partner)"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "c9b90d0000000000",
+            "content": {
+                "resourceType": "Observation",
+                "id": "c9b90d0000000000",
+                "extension": [
+                    {
+                        "url": "http://fhir.blackpear.com/observationGroup",
+                        "valueString": "c9b90d0000000000"
+                    }
+                ],
+                "name": {
+                    "coding": [
+                        {
+                            "system": "CTV3",
+                            "code": "246A.",
+                            "display": "O/E - Diastolic BP reading"
+                        },
+                        {
+                            "system": "http://read.info/ctv3",
+                            "code": "246A.",
+                            "display": "O/E - Diastolic BP reading"
+                        }
+                    ],
+                    "text": "O/E - Diastolic BP reading"
+                },
+                "valueQuantity": {
+                    "value": 100,
+                    "units": "mmHg"
+                },
+                "issued": "1995-08-09T00:00:00+01:00",
+                "status": "final",
+                "reliability": "unknown",
+                "subject": {
+                    "reference": "Patient/9990073228"
+                },
+                "performer": [
+                    {
+                        "reference": "Practitioner/drpeter0101",
+                        "display": "TAYLOR, Dr Peter (GP Partner)"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "HSCIC4",
+            "content": {
+                "resourceType": "Organization",
+                "id": "HSCIC4",
+                "identifier": [
+                    {
+                        "system": "http://www.datadictionary.nhs.uk/data_dictionary/attributes/o/org/organisation_code_de.asp",
+                        "value": "HSCIC4"
+                    }
+                ],
+                "name": "HSCIC Unsupported Test Environment D",
+                "telecom": [
+                    {
+                        "system": "phone",
+                        "value": "01132547067",
+                        "use": "work"
+                    },
+                    {
+                        "system": "fax",
+                        "value": "01130000000",
+                        "use": "work"
+                    }
+                ],
+                "address": [
+                    {
+                        "text": "2 Trevelyan Square, Leeds, West Yorkshire, LS1 6AE",
+                        "line": [
+                            "2 Trevelyan Square"
+                        ],
+                        "city": "Leeds",
+                        "state": "West Yorkshire",
+                        "zip": "LS1 6AE"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "drpeter0101",
+            "content": {
+                "resourceType": "Practitioner",
+                "id": "drpeter0101",
+                "identifier": [
+                    {
+                        "use": "secondary",
+                        "value": "drpeter0101"
+                    },
+                    {
+                        "label": "NationalCode",
+                        "value": "1411592"
+                    }
+                ],
+                "name": {
+                    "text": "Dr Peter Taylor",
+                    "family": [
+                        "Taylor"
+                    ],
+                    "given": [
+                        "Dr Peter"
+                    ]
+                },
+                "organization": {
+                    "reference": "Organization/HSCIC4"
+                },
+                "role": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://hl7.org/fhir/practitioner-role",
+                                "code": "doctor",
+                                "display": "Doctor"
+                            }
+                        ],
+                        "text": "Doctor"
+                    }
+                ]
+            }
+        }
+    ]
+}
