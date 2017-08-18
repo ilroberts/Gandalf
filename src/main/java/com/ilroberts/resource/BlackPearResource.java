@@ -17,6 +17,8 @@ public class BlackPearResource {
 
     @Inject
     private GetPatientActivity getPatientActivity;
+    @Inject
+    private FhirContext ctx;
 
     @GET
     @Path("/{orgId}/Patient/{patientId}")
@@ -26,7 +28,6 @@ public class BlackPearResource {
 
         if (!patient.isEmpty()) {
 
-            FhirContext ctx = FhirContext.forDstu2();
             IParser parser = ctx.newJsonParser();
             return parser.encodeResourceToString(patient.get());
         } else {
