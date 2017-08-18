@@ -3,6 +3,7 @@ package com.ilroberts.helper;
 import ca.uhn.fhir.context.FhirContext;
 import ca.uhn.fhir.model.dstu2.resource.Patient;
 import ca.uhn.fhir.parser.IParser;
+import com.google.inject.Inject;
 import com.google.inject.Singleton;
 import com.ilroberts.response.GetPatientResponse;
 import io.atlassian.fugue.Option;
@@ -20,9 +21,10 @@ public class BlackPearHelperImpl implements BlackPearHelper {
     private final FhirContext ctx;
     private final IParser parser;
 
-    public BlackPearHelperImpl() {
+    @Inject
+    public BlackPearHelperImpl(FhirContext ctx) {
 
-        ctx = FhirContext.forDstu2();
+        this.ctx = ctx;
         parser = ctx.newJsonParser();
     }
 

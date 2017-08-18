@@ -1,7 +1,9 @@
 package com.ilroberts;
 
+import ca.uhn.fhir.context.FhirContext;
 import com.google.inject.AbstractModule;
 import com.google.inject.Provides;
+import com.google.inject.Singleton;
 import com.ilroberts.activity.GetPatientActivity;
 import com.ilroberts.activity.GetPatientActivityImpl;
 import com.ilroberts.api.BlackPearAPI;
@@ -30,5 +32,10 @@ public class ServerModule extends AbstractModule {
     @Provides
     public BlackPearAPI provideBlackPearAPI(ServerConfiguration configuration) {
         return new BlackPearAPIImpl(configuration.getBlackPearConfiguration());
+    }
+
+    @Provides@Singleton
+    public FhirContext providesFhirContext(){
+        return FhirContext.forDstu2();
     }
 }
